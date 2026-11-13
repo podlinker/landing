@@ -101,7 +101,7 @@ The page alternates a cool paper ground, a pale blue story field and a dark clos
 
 - Oversized condensed headings against plain, high-contrast color fields.
 - One ruled, three-stage network diagram instead of decorative podcast imagery.
-- Signal lime reserved for the call to action, selected language, status dot and example episode.
+- Signal lime reserved for the in-page call to action, selected language, status dot and example episode.
 - Square buttons and content blocks; only person avatars and the status dot are circular.
 
 ## Colors
@@ -109,7 +109,7 @@ The page alternates a cool paper ground, a pale blue story field and a dark clos
 ### Primary
 
 - **Programme blue** (`#3047cd`) establishes the header, hero and footer, and appears in diagram arrows and the episode index. **Programme blue deep** (`#2336a9`) supplies the small episode-index text.
-- **Signal lime** (`#e5f468`) identifies the main demo action, selected language, status indicator, selection highlight and fictional episode example. The observed button hover lightens to `#f1faad`.
+- **Signal lime** (`#e5f468`) identifies the in-page action, selected language, status indicator, selection highlight and fictional episode example. The button hover lightens to `#f1faad`.
 
 ### Secondary
 
@@ -137,7 +137,7 @@ Barlow Condensed is self-hosted at weights 700 and 800 for the major headings an
 
 ## Layout
 
-The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-actions row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. Story panels use paired heading and paragraph columns (`1fr .8fr`); the closing field places its statement opposite the demo action.
+The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. Story panels use paired heading and paragraph columns (`1fr .8fr`); the closing field contains only a brief construction status.
 
 At `1050px`, the hero state note returns to normal flow and the hero description and actions stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, the mechanism becomes a vertical sequence, and story and closing fields become one column. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
 
@@ -153,9 +153,9 @@ Buttons, language selections, example podcasts and the episode block have square
 
 ## Components
 
-### Demo action
+### In-page action
 
-The primary call to action is a square lime link (`min-height: 57px`, `padding: 0 19px`) with a trailing inline arrow. It lightens on hover and uses the shared lime focus outline. The same action appears on the blue hero and ink closing field. A secondary underlined text link is used only for the in-page mechanism jump.
+The primary call to action is a square lime link to the mechanism section (`min-height: 57px`, `padding: 0 19px`) with a trailing inline arrow. It lightens on hover and uses the shared lime focus outline.
 
 ### Header and language control
 
@@ -167,7 +167,7 @@ People are ruled rows with circular initial avatars. Podcasts are flat, softly t
 
 ### Story and closing fields
 
-The two story sections alternate pale blue and cool paper while preserving the same two-column text structure. The closing field reverses to ink and repeats the demo action with a clearly bordered fictionality label. None of these fields are raised cards.
+The two story sections alternate pale blue and cool paper while preserving the same two-column text structure. The closing field reverses to ink and states that the service is not yet available. None of these fields are raised cards.
 
 ## Do's and Don'ts
 
