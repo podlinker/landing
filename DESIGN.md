@@ -118,7 +118,7 @@ The page alternates a cool paper ground and a pale blue story field, then ends w
 ### Neutral
 
 - **Ink** (`#182334`) carries reading text. **Cool paper** (`#f4f6f5`) is the default reading surface.
-- **Muted ink** (`#53616c`) is used for diagram captions and explanatory notes. **Rule** (`#cbd4d5`) separates people and the alternate story field.
+- **Muted ink** (`#53616c`) is used for diagram captions and explanatory notes. **Rule** (`#cbd4d5`) separates people in the diagram.
 - White is the text color on blue and ink fields. The first story panel uses a pale blue field (`#e7ebfc`), while the second returns to cool paper.
 
 **The Signal Color Rule.** Lime indicates a specific action, selection or example; it is not a general background accent.
@@ -128,7 +128,7 @@ The page alternates a cool paper ground and a pale blue story field, then ends w
 Barlow Condensed is self-hosted at weights 700 and 800 for the major headings and example titles. The system sans stack serves paragraphs, controls and metadata. The type pairing matches the product app while allowing larger, more declarative landing-page headings.
 
 - **Display** (800; `clamp(62px, 7.1vw, 96px)`; `0.91` line-height) carries the hero proposition.
-- **Headline** (800; `clamp(50px, 5.6vw, 77px)`; `0.94` line-height) carries the paired story statements.
+- **Headline** (800; `clamp(50px, 5.6vw, 77px)`; `0.94` line-height) carries the story statement.
 - **Title** (700; `clamp(39px, 4vw, 55px)`; `0.98` line-height) labels the mechanism section.
 - **Body** (19px; `1.58` line-height in story panels) explains the proposition in a familiar system sans, with a measure up to `55ch` in the story fields.
 - **Label** (14px and 700 in navigation; smaller, heavier labels in the diagram) keeps navigation and example metadata compact.
@@ -137,9 +137,9 @@ Barlow Condensed is self-hosted at weights 700 and 800 for the major headings an
 
 ## Layout
 
-The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. Story panels use paired heading and paragraph columns (`1fr .8fr`), and the footer follows the second story directly.
+The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. The story section uses paired heading and paragraph columns (`1fr .8fr`), followed directly by the footer.
 
-At `1050px`, the hero state note returns to normal flow and the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, the mechanism becomes a vertical sequence, and story fields become one column. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
+At `1050px`, the hero state note returns to normal flow and the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, the mechanism becomes a vertical sequence, and the story becomes one column. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
 
 ## Elevation & Depth
 
@@ -165,9 +165,9 @@ The header has a blue field, compact brand lockup and underlined-on-hover naviga
 
 People are ruled rows with circular initial avatars. Podcasts are flat, softly tinted rows with a small uppercase type label and condensed name. The destination episode is a solid lime block with a blue index marker, a condensed example title and a visible fictional-example label. Arrows express the relationship between the three columns; they rotate with the mobile sequence.
 
-### Story fields
+### Story field
 
-The two story sections alternate pale blue and cool paper while preserving the same two-column text structure. Neither is a raised card.
+The story section uses a pale blue field and a two-column text structure on desktop. It is not a raised card.
 
 ## Do's and Don'ts
 
