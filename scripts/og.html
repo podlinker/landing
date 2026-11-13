@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Barlow;src:url('../assets/barlow-condensed-800.woff2') format('woff2');font-weight:800}*{box-sizing:border-box}html,body{margin:0;width:1200px;height:630px}body{background:#3047cd;color:white;font-family:Arial,sans-serif;padding:52px 68px;position:relative}header{display:flex;align-items:center;gap:12px;font-size:27px;font-weight:bold}.mark{display:grid;place-items:center;background:white;width:38px;height:38px}.mark img{width:31px;height:31px}header b{color:#e5f468}h1{font:800 93px/.91 Barlow,Arial,sans-serif;letter-spacing:-.02em;max-width:920px;margin:78px 0 0}p{font-size:25px;line-height:1.3;margin:37px 0 0;max-width:650px}.rule{position:absolute;left:68px;right:68px;bottom:44px;height:2px;background:#e5f468}
+</style></head><body><header><span class="mark"><img src="../assets/logo.svg" alt=""></span><span>podlinker<b>.</b></span></header><h1 id="headline"></h1><p id="subtitle"></p><div class="rule"></div><script>
+const copy = {
+  ca: ["El teu pròxim podcast comença amb algú que segueixes.", "Descobreix podcasts de persona a persona."],
+  es: ["Tu próximo podcast empieza con alguien a quien sigues.", "Descubre podcasts de persona a persona."],
+  en: ["Your next podcast starts with someone you follow.", "Discover podcasts, person to person."]
+};
+const language = new URLSearchParams(location.search).get('lang');
+const [headline, subtitle] = copy[language] || copy.ca;
+document.getElementById('headline').textContent = headline;
+document.getElementById('subtitle').textContent = subtitle;
+</script></body></html>
