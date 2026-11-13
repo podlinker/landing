@@ -2,7 +2,7 @@
 
 Public pre-launch landing for Podlinker. It explains the people → podcasts → episodes discovery model without implying that a podcast follow is a listen or recommendation. The example people and shows are fictional. Product decisions are canonical in [`podlinker/project`](https://github.com/podlinker/project).
 
-The site is static HTML/CSS/JS in Catalan, Spanish and English. No account data, tracking or signup is collected here. The demo links open the separately hosted, fictional [staging experience](https://staging.podlinker.com/).
+The site is static HTML/CSS/JS in Catalan, Spanish and English. No account data, tracking or signup is collected here. The landing does not link to the staging demo.
 
 ## Edit and preview
 
