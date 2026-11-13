@@ -4,7 +4,7 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-BASE = "https://podlinker.github.io/landing"
+BASE = "https://podlinker.com"
 
 COPY = {
     "ca": {
@@ -123,4 +123,12 @@ for locale, raw in COPY.items():
 '''
     (ROOT / locale / "index.html").write_text(html)
 
-(ROOT / "index.html").write_text('''<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Podlinker</title><script>try{{var s=localStorage.getItem('podlinker-language');var n=(navigator.language||'').slice(0,2).toLowerCase();location.replace((['ca','es','en'].includes(s)?s:['ca','es','en'].includes(n)?n:'ca')+'/');}}catch(e){{location.replace('ca/');}}</script></head><body><p><a href="ca/">Podlinker · Català</a></p><p><a href="es/">Español</a> · <a href="en/">English</a></p></body></html>'''.replace('{{','{').replace('}}','}'))
+(ROOT / "index.html").write_text('''<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Podlinker</title><script src="assets/redirect.js"></script></head><body><p><a href="ca/">Podlinker · Català</a></p><p><a href="es/">Español</a> · <a href="en/">English</a></p></body></html>''')
+
+(ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
+(ROOT / "sitemap.xml").write_text(
+    '<?xml version="1.0" encoding="UTF-8"?>\n'
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    + "".join(f"  <url><loc>{BASE}/{locale}/</loc></url>\n" for locale in COPY)
+    + '</urlset>\n'
+)
