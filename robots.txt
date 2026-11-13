@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://podlinker.github.io/landing/sitemap.xml
+Sitemap: https://podlinker.com/sitemap.xml

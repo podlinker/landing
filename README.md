@@ -19,6 +19,6 @@ Social preview images are committed as `assets/og-*.png`; `scripts/og.html?lang=
 
 ## Publication
 
-`.github/workflows/pages.yml` publishes only the static entry points, assets, robots file and sitemap to GitHub Pages on a push to `main`. The older Next.js template files remain in the repository for now but are not built or shipped by that workflow. The public review URL is `https://podlinker.github.io/landing/`.
+The canonical public site is `https://podlinker.com/`, served from the Podlinker test host as a separate static Caddy site. The deployment uses an independent release directory and does not replace `staging.podlinker.com`. `.github/workflows/pages.yml` also publishes the same static entry points, assets, robots file and sitemap to GitHub Pages on a push to `main`; its URL is `https://podlinker.github.io/landing/`. The older Next.js template files remain in the repository for now but are not built or shipped by that workflow.
 
-Do not set a `CNAME` or change DNS until the GitHub Pages version is approved for `podlinker.com`. When moving domains, update `BASE` in `scripts/build.py`, regenerate the pages, and update `robots.txt` and `sitemap.xml` before configuring the domain.
+Edit `BASE` in `scripts/build.py` when moving the canonical domain. The build regenerates the localized pages, `robots.txt` and `sitemap.xml`. The root-language redirect is an external script so the site works under Caddy's `script-src 'self'` policy. Do not set a GitHub Pages `CNAME`; DNS for `podlinker.com` points to the test host.
