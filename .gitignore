@@ -33,3 +33,6 @@ local
 
 # vercel
 .vercel
+
+# local design review captures
+/.impeccable/review/

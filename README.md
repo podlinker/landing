@@ -1,95 +1,24 @@
-# React.js landing page template v2
+# Podlinker landing
 
-## <a href="https://react-landing-page-template-2021.vercel.app/"> LIVE DEMO</a>
+Public pre-launch landing for Podlinker. It explains the people → podcasts → episodes discovery model without implying that a podcast follow is a listen or recommendation. The example people and shows are fictional. Product decisions are canonical in [`podlinker/project`](https://github.com/podlinker/project).
 
-<img src="public/assets/gifs/demo.gif" width="100%" height="auto" />
+The site is static HTML/CSS/JS in Catalan, Spanish and English. No account data, tracking or signup is collected here. The demo links open the separately hosted, fictional [staging experience](https://staging.podlinker.com/).
 
-### Description
+## Edit and preview
 
-This is a React.js/Next.js based landing page plug-n-play template, ideal for startups/companies/service providers wanting to showcase their vision in a single page sleek and modern landing page.
+Edit translations in `scripts/build.py`, then run:
 
-### Features
-
-- 📱  Responsive design
-- 🔥 [Next.js](https://nextjs.org) for Static Site Generator
-
-- 🎨 Integrate with [Tailwind CSS](https://tailwindcss.com) (w/ JIT mode)
-
-- 💅 PostCSS for processing Tailwind CSS and integrated to `styled-jsx`
-
-- 🎉 Type checking [TypeScript](https://www.typescriptlang.org)
-
-- 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript
-
-- 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
-
-- 🖱️ One click deployment with Vercel or Netlify (or manual deployment to any hosting services)
-
-Built-in feature from Next.js:
-
-- ☕ Minify HTML & CSS
-- 💨 Live reload
-- ✅ Cache busting
-
-### Make it your own
-
-#### 1. Clone repo
-
-```
-git clone https://github.com/issaafalkattan/react-landing-page-template-2021.git
-cd react-landing-page-template-2021
-yarn
+```sh
+python3 scripts/build.py
+python3 -m http.server 8000
 ```
 
-Then, you can run locally in development mode with live reload:
+Open `http://localhost:8000/`. The root route chooses a previously selected language, then the browser language, then Catalan. Language links persist the choice locally. Each `/ca/`, `/es/` and `/en/` route has its own metadata and canonical URL. To change the visual system, follow `DESIGN.md` and the app's design system.
 
-```
-yarn dev
-```
+Social preview images are committed as `assets/og-*.png`; `scripts/og.html?lang=ca|es|en` is their source. Regenerate all three at 1200×630 if the headline changes.
 
-Open <http://localhost:3000> with your favorite browser to see your project.
+## Publication
 
-#### 2. Add your own content
+`.github/workflows/pages.yml` publishes only the static entry points, assets, robots file and sitemap to GitHub Pages on a push to `main`. The older Next.js template files remain in the repository for now but are not built or shipped by that workflow. The public review URL is `https://podlinker.github.io/landing/`.
 
- 1. **Content**: change the configuration in the ```src/config/index.json``` file to change the content of the landing page to match your use ```src/config/index.json```  folder and .
- 2. **Images**:  add any images/icons..etc to the ```public/assets/images```  folder and update their reference source in ```src/config/index.json```.
- 3. **Theme**:  to change the theme, update the ```tailwind.config.js```  file to match the theme of your branding. [Tutorial](https://tailwindcss.com/docs/configuration).
-
-#### 3. Deploy to production
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fissaafalkattan%2Freact-landing-page-template-2021)
-
-##### Deploy manually
-
-You can see the results locally in production mode with:
-
-  ```
-yarn build
-yarn start
-```
-
-The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
-
-You can create an optimised production build with:
-
-```
-yarn build-prod
-```
-
-### Contributions
-
-Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
-
-### License
-
-Licensed under the MIT License, Copyright © 2021
-  
-
-## Liked this template? <a href="https://www.buymeacoffee.com/issaaf">Buy me a coffee ☕️</a>
-
-
-
-
----
-
-### Looking for v1? <a href="https://github.com/issaafalkattan/React-Landing-Page-Template">V1</a>
+Do not set a `CNAME` or change DNS until the GitHub Pages version is approved for `podlinker.com`. When moving domains, update `BASE` in `scripts/build.py`, regenerate the pages, and update `robots.txt` and `sitemap.xml` before configuring the domain.
