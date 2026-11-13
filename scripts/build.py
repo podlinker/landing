@@ -17,7 +17,6 @@ COPY = {
         "diagramHeading": "Així es construeix el teu feed", "youFollow": "Tu segueixes", "people": "persones", "theyFollow": "Elles segueixen", "podcasts": "podcasts", "youDiscover": "Tu descobreixes", "episodes": "episodis",
         "person1": "La Mar", "person2": "En Pol", "show1": "Fora de mapa", "show2": "Herbari", "sampleEpisode": "Un nou capítol", "sampleSource": "de Fora de mapa", "sampleLabel": "Exemple fictici",
         "section1": "No segueixes temes. Segueixes persones.", "section1p": "Cada perfil és una col·lecció personal i variada de podcasts. Quan segueixes algú, els capítols nous dels podcasts que segueix entren al teu feed, ordenats per data de publicació.",
-        "section2": "Un capítol, una sola vegada.", "section2p": "Si dues persones de la teva xarxa segueixen el mateix podcast, cada capítol només apareix un cop. Veus qui el té a la seva col·lecció sense confondre-ho amb una escolta o una recomanació.",
         "note": "Seguir un podcast no vol dir haver escoltat ni recomanat tots els seus capítols.",
         "footer": "Descobrir podcasts, de persona a persona.", "brandAria": "Podlinker, inici", "footerStatus": "Una nova manera de descobrir podcasts. En construcció.",
     },
@@ -31,7 +30,6 @@ COPY = {
         "diagramHeading": "Así se construye tu feed", "youFollow": "Tú sigues a", "people": "personas", "theyFollow": "Ellas siguen", "podcasts": "podcasts", "youDiscover": "Tú descubres", "episodes": "episodios",
         "person1": "Mar", "person2": "Pol", "show1": "Fora de mapa", "show2": "Herbari", "sampleEpisode": "Un nuevo episodio", "sampleSource": "de Fora de mapa", "sampleLabel": "Ejemplo ficticio",
         "section1": "No sigues temas. Sigues a personas.", "section1p": "Cada perfil es una colección personal y variada de podcasts. Cuando sigues a alguien, los nuevos episodios de los podcasts que sigue entran en tu feed, ordenados por fecha de publicación.",
-        "section2": "Un episodio, una sola vez.", "section2p": "Si dos personas de tu red siguen el mismo podcast, cada episodio aparece una sola vez. Ves quién lo tiene en su colección sin confundirlo con una escucha o una recomendación.",
         "note": "Seguir un podcast no significa haber escuchado ni recomendado todos sus episodios.",
         "footer": "Descubrir podcasts, de persona a persona.", "brandAria": "Podlinker, inicio", "footerStatus": "Una nueva manera de descubrir podcasts. En construcción.",
     },
@@ -45,7 +43,6 @@ COPY = {
         "diagramHeading": "How your feed takes shape", "youFollow": "You follow", "people": "people", "theyFollow": "They follow", "podcasts": "podcasts", "youDiscover": "You discover", "episodes": "episodes",
         "person1": "Mar", "person2": "Pol", "show1": "Fora de mapa", "show2": "Herbari", "sampleEpisode": "A new episode", "sampleSource": "from Fora de mapa", "sampleLabel": "Fictional example",
         "section1": "You don't follow topics. You follow people.", "section1p": "Each profile is a personal, varied collection of podcasts. Follow someone and new episodes from the podcasts they follow enter your feed, ordered by publication date.",
-        "section2": "One episode, once.", "section2p": "If two people in your network follow the same podcast, each episode appears only once. You can see whose collection it belongs to without mistaking that for a listen or a recommendation.",
         "note": "Following a podcast doesn't mean someone has listened to or recommended every episode.",
         "footer": "Discover podcasts, person to person.", "brandAria": "Podlinker, home", "footerStatus": "A new way to discover podcasts. In the making.",
     },
@@ -119,7 +116,6 @@ for locale, raw in COPY.items():
       </div>
     </section>
     <section class="story" aria-labelledby="story-title"><div class="wrap story-grid"><div><h2 id="story-title">{c["section1"]}</h2></div><p>{c["section1p"]}</p></div></section>
-    <section class="story story-alt" aria-labelledby="once-title"><div class="wrap story-grid"><div><h2 id="once-title">{c["section2"]}</h2></div><p>{c["section2p"]}</p></div></section>
   </main>
   <footer class="site-footer"><div class="wrap footer-inner"><div><span class="footer-brand">podlinker<span>.</span></span><p>{c["footer"]}</p></div><small>{c["footerStatus"]}</small></div></footer>
 </body>
