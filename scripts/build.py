@@ -19,7 +19,6 @@ COPY = {
         "section1": "No segueixes temes. Segueixes persones.", "section1p": "Cada perfil és una col·lecció personal i variada de podcasts. Quan segueixes algú, els capítols nous dels podcasts que segueix entren al teu feed, ordenats per data de publicació.",
         "section2": "Un capítol, una sola vegada.", "section2p": "Si dues persones de la teva xarxa segueixen el mateix podcast, cada capítol només apareix un cop. Veus qui el té a la seva col·lecció sense confondre-ho amb una escolta o una recomanació.",
         "note": "Seguir un podcast no vol dir haver escoltat ni recomanat tots els seus capítols.",
-        "statusTitle": "Seguim construint Podlinker.", "statusText": "Aquesta pàgina explica la idea. El servei encara no està disponible.",
         "footer": "Descobrir podcasts, de persona a persona.", "brandAria": "Podlinker, inici", "footerStatus": "Una nova manera de descobrir podcasts. En construcció.",
     },
     "es": {
@@ -34,7 +33,6 @@ COPY = {
         "section1": "No sigues temas. Sigues a personas.", "section1p": "Cada perfil es una colección personal y variada de podcasts. Cuando sigues a alguien, los nuevos episodios de los podcasts que sigue entran en tu feed, ordenados por fecha de publicación.",
         "section2": "Un episodio, una sola vez.", "section2p": "Si dos personas de tu red siguen el mismo podcast, cada episodio aparece una sola vez. Ves quién lo tiene en su colección sin confundirlo con una escucha o una recomendación.",
         "note": "Seguir un podcast no significa haber escuchado ni recomendado todos sus episodios.",
-        "statusTitle": "Seguimos construyendo Podlinker.", "statusText": "Esta página explica la idea. El servicio aún no está disponible.",
         "footer": "Descubrir podcasts, de persona a persona.", "brandAria": "Podlinker, inicio", "footerStatus": "Una nueva manera de descubrir podcasts. En construcción.",
     },
     "en": {
@@ -49,7 +47,6 @@ COPY = {
         "section1": "You don't follow topics. You follow people.", "section1p": "Each profile is a personal, varied collection of podcasts. Follow someone and new episodes from the podcasts they follow enter your feed, ordered by publication date.",
         "section2": "One episode, once.", "section2p": "If two people in your network follow the same podcast, each episode appears only once. You can see whose collection it belongs to without mistaking that for a listen or a recommendation.",
         "note": "Following a podcast doesn't mean someone has listened to or recommended every episode.",
-        "statusTitle": "We're still building Podlinker.", "statusText": "This page explains the idea. The service isn't available yet.",
         "footer": "Discover podcasts, person to person.", "brandAria": "Podlinker, home", "footerStatus": "A new way to discover podcasts. In the making.",
     },
 }
@@ -123,7 +120,6 @@ for locale, raw in COPY.items():
     </section>
     <section class="story" aria-labelledby="story-title"><div class="wrap story-grid"><div><h2 id="story-title">{c["section1"]}</h2></div><p>{c["section1p"]}</p></div></section>
     <section class="story story-alt" aria-labelledby="once-title"><div class="wrap story-grid"><div><h2 id="once-title">{c["section2"]}</h2></div><p>{c["section2p"]}</p></div></section>
-    <section class="closing" aria-labelledby="closing-title"><div class="wrap closing-inner"><h2 id="closing-title">{c["statusTitle"]}</h2><p>{c["statusText"]}</p></div></section>
   </main>
   <footer class="site-footer"><div class="wrap footer-inner"><div><span class="footer-brand">podlinker<span>.</span></span><p>{c["footer"]}</p></div><small>{c["footerStatus"]}</small></div></footer>
 </body>

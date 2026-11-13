@@ -95,7 +95,7 @@ components:
 
 The public landing extends the app's radio-programme-guide identity into a more expressive, editorial introduction. Programme blue carries the header and opening statement; condensed display type gives the proposition its voice. The mechanism board makes the social relationship visible as a sequence of people, podcasts and episodes. This is a flat, ruled composition, not a stack of floating cards.
 
-The page alternates a cool paper ground, a pale blue story field and a dark closing field. A compact microphone mark anchors the brand. Examples in the mechanism board are clearly fictional; its visual treatment must not imply that following a podcast means listening to or recommending every episode.
+The page alternates a cool paper ground and a pale blue story field, then ends with the programme-blue footer. A compact microphone mark anchors the brand. Examples in the mechanism board are clearly fictional; its visual treatment must not imply that following a podcast means listening to or recommending every episode.
 
 **Key Characteristics:**
 
@@ -117,7 +117,7 @@ The page alternates a cool paper ground, a pale blue story field and a dark clos
 
 ### Neutral
 
-- **Ink** (`#182334`) carries reading text and the closing field. **Cool paper** (`#f4f6f5`) is the default reading surface.
+- **Ink** (`#182334`) carries reading text. **Cool paper** (`#f4f6f5`) is the default reading surface.
 - **Muted ink** (`#53616c`) is used for diagram captions and explanatory notes. **Rule** (`#cbd4d5`) separates people and the alternate story field.
 - White is the text color on blue and ink fields. The first story panel uses a pale blue field (`#e7ebfc`), while the second returns to cool paper.
 
@@ -137,9 +137,9 @@ Barlow Condensed is self-hosted at weights 700 and 800 for the major headings an
 
 ## Layout
 
-The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. Story panels use paired heading and paragraph columns (`1fr .8fr`); the closing field contains only a brief construction status.
+The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. Story panels use paired heading and paragraph columns (`1fr .8fr`), and the footer follows the second story directly.
 
-At `1050px`, the hero state note returns to normal flow and the hero description and actions stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, the mechanism becomes a vertical sequence, and story and closing fields become one column. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
+At `1050px`, the hero state note returns to normal flow and the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, the mechanism becomes a vertical sequence, and story fields become one column. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
 
 ## Elevation & Depth
 
@@ -165,9 +165,9 @@ The header has a blue field, compact brand lockup and underlined-on-hover naviga
 
 People are ruled rows with circular initial avatars. Podcasts are flat, softly tinted rows with a small uppercase type label and condensed name. The destination episode is a solid lime block with a blue index marker, a condensed example title and a visible fictional-example label. Arrows express the relationship between the three columns; they rotate with the mobile sequence.
 
-### Story and closing fields
+### Story fields
 
-The two story sections alternate pale blue and cool paper while preserving the same two-column text structure. The closing field reverses to ink and states that the service is not yet available. None of these fields are raised cards.
+The two story sections alternate pale blue and cool paper while preserving the same two-column text structure. Neither is a raised card.
 
 ## Do's and Don'ts
 
