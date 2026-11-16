@@ -19,12 +19,6 @@ typography:
     fontWeight: 800
     lineHeight: 0.91
     letterSpacing: "-0.022em"
-  headline:
-    fontFamily: "Barlow Condensed, sans-serif"
-    fontSize: "clamp(50px, 5.6vw, 77px)"
-    fontWeight: 800
-    lineHeight: 0.94
-    letterSpacing: "-0.021em"
   title:
     fontFamily: "Barlow Condensed, Impact, sans-serif"
     fontSize: "clamp(39px, 4vw, 55px)"
@@ -95,7 +89,7 @@ components:
 
 The public landing extends the app's radio-programme-guide identity into a more expressive, editorial introduction. Programme blue carries the header and opening statement; condensed display type gives the proposition its voice. The mechanism board makes the social relationship visible as a sequence of people, podcasts and episodes. This is a flat, ruled composition, not a stack of floating cards.
 
-The page alternates a cool paper ground and a pale blue story field, then ends with the programme-blue footer. A compact microphone mark anchors the brand. Examples in the mechanism board are clearly fictional; its visual treatment must not imply that following a podcast means listening to or recommending every episode.
+The page moves from the programme-blue opening to the cool-paper mechanism board and closes with the programme-blue footer. A compact microphone mark anchors the brand. Examples in the mechanism board are clearly fictional; its visual treatment must not imply that following a podcast means listening to or recommending every episode.
 
 **Key Characteristics:**
 
@@ -119,7 +113,7 @@ The page alternates a cool paper ground and a pale blue story field, then ends w
 
 - **Ink** (`#182334`) carries reading text. **Cool paper** (`#f4f6f5`) is the default reading surface.
 - **Muted ink** (`#53616c`) is used for diagram captions and explanatory notes. **Rule** (`#cbd4d5`) separates people in the diagram.
-- White is the text color on blue and ink fields. The first story panel uses a pale blue field (`#e7ebfc`), while the second returns to cool paper.
+- White is the text color on blue and ink fields.
 
 **The Signal Color Rule.** Lime indicates a specific action, selection or example; it is not a general background accent.
 
@@ -128,18 +122,17 @@ The page alternates a cool paper ground and a pale blue story field, then ends w
 Barlow Condensed is self-hosted at weights 700 and 800 for the major headings and example titles. The system sans stack serves paragraphs, controls and metadata. The type pairing matches the product app while allowing larger, more declarative landing-page headings.
 
 - **Display** (800; `clamp(62px, 7.1vw, 96px)`; `0.91` line-height) carries the hero proposition.
-- **Headline** (800; `clamp(50px, 5.6vw, 77px)`; `0.94` line-height) carries the story statement.
 - **Title** (700; `clamp(39px, 4vw, 55px)`; `0.98` line-height) labels the mechanism section.
-- **Body** (19px; `1.58` line-height in story panels) explains the proposition in a familiar system sans, with a measure up to `55ch` in the story fields.
+- **Body** uses a familiar system sans for the hero introduction and explanatory diagram note.
 - **Label** (14px and 700 in navigation; smaller, heavier labels in the diagram) keeps navigation and example metadata compact.
 
 **The Condensed Voice Rule.** Use Barlow Condensed for prominent propositions and named example titles; keep explanatory reading in the system sans.
 
 ## Layout
 
-The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. The story section uses paired heading and paragraph columns (`1fr .8fr`), followed directly by the footer.
+The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. The footer follows the mechanism section directly.
 
-At `1050px`, the hero state note returns to normal flow and the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, the mechanism becomes a vertical sequence, and the story becomes one column. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
+At `1050px`, the hero state note returns to normal flow and the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, and the mechanism becomes a vertical sequence. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
 
 ## Elevation & Depth
 
@@ -164,10 +157,6 @@ The header has a blue field, compact brand lockup and underlined-on-hover naviga
 ### Mechanism board
 
 People are ruled rows with circular initial avatars. Podcasts are flat, softly tinted rows with a small uppercase type label and condensed name. The destination episode is a solid lime block with a blue index marker, a condensed example title and a visible fictional-example label. Arrows express the relationship between the three columns; they rotate with the mobile sequence.
-
-### Story field
-
-The story section uses a pale blue field and a two-column text structure on desktop. It is not a raised card.
 
 ## Do's and Don'ts
 
