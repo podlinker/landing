@@ -83,11 +83,13 @@ components:
 
 # Design System: Podlinker Landing
 
+This file records the **current landing implementation**, not approved corporate identity. Shared assets and proposed cross-product rules live in [`podlinker/artwork/BRAND.md`](https://github.com/podlinker/artwork/blob/main/BRAND.md). Its unresolved color and typography decisions take precedence over any assumption that the tokens below are official brand colors.
+
 ## Overview
 
 **Creative North Star: "La graella d'escoltes"**
 
-The public landing extends the app's radio-programme-guide identity into a more expressive, editorial introduction. Programme blue carries the header and opening statement; condensed display type gives the proposition its voice. The mechanism board makes the social relationship visible as a sequence of people, podcasts and episodes. This is a flat, ruled composition, not a stack of floating cards.
+The public landing extends the app's current radio-programme-guide visual language into a more expressive, editorial introduction. Programme blue carries the header and opening statement; condensed display type gives the proposition its voice. The mechanism board makes the social relationship visible as a sequence of people, podcasts and episodes. This is a flat, ruled composition, not a stack of floating cards.
 
 The page moves from the programme-blue opening to the cool-paper mechanism board and closes with the programme-blue footer. A compact microphone mark anchors the brand. Examples in the mechanism board are clearly fictional; its visual treatment must not imply that following a podcast means listening to or recommending every episode.
 
@@ -107,7 +109,7 @@ The page moves from the programme-blue opening to the cool-paper mechanism board
 
 ### Secondary
 
-- **Culture coral** (`#f38b74`), **food gold** (`#e6cd5d`) and **technology sea** (`#80c1bd`) come from the app's topic palette. The landing uses lighter tints of coral and sea for person initials, and coral and gold for example podcast rows.
+- **Culture coral** (`#f38b74`), **food gold** (`#e6cd5d`) and **technology sea** (`#80c1bd`) are inherited from the earlier app demo's topic palette. Here they distinguish fictional diagram elements; they are not approved corporate colors or a rule for real podcast covers.
 
 ### Neutral
 
@@ -163,7 +165,7 @@ People are ruled rows with circular initial avatars. Podcasts are flat, softly t
 ### Do:
 
 - **Do** keep people, followed podcasts and newly discovered episodes legible as separate stages.
-- **Do** preserve the app's programme blue, cool paper, ink, signal lime and Barlow Condensed identity.
+- **Do** keep the landing's currently implemented blue, cool paper, ink, lime and Barlow Condensed vocabulary coherent until a cross-product palette and typography are approved in the brand guide.
 - **Do** use flat rules and color fields to organize information, including on mobile.
 
 ### Don't:
