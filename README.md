@@ -15,7 +15,7 @@ python3 scripts/build.py
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/`. The root route chooses a previously selected language, then the browser language, then Catalan. Language links persist the choice locally. Each `/ca/`, `/es/` and `/en/` route has its own metadata and canonical URL. To change the visual system, follow `DESIGN.md` and the app's design system.
+Open `http://localhost:8000/`. The root route chooses a previously selected language, then the browser language, then Catalan. Language links persist the choice locally. Each `/ca/`, `/es/` and `/en/` route has its own metadata and canonical URL. For visual changes, consult the shared proposal in `podlinker/artwork/BRAND.md` and this repository's `DESIGN.md`.
 
 Social preview images are committed as `assets/og-*.png`; `scripts/og.html?lang=ca|es|en` is their source. Regenerate all three at 1200×630 if the headline changes.
 
