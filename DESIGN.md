@@ -83,7 +83,7 @@ components:
 
 # Design System: Podlinker Landing
 
-This file records the **current landing implementation**, not approved corporate identity. Shared assets and proposed cross-product rules live in [`podlinker/artwork/BRAND.md`](https://github.com/podlinker/artwork/blob/main/BRAND.md). Its unresolved color and typography decisions take precedence over any assumption that the tokens below are official brand colors.
+This file records the **current landing implementation**, not the corporate identity. Shared assets and approved cross-product color, typography and tone rules live in [`podlinker/artwork/BRAND.md`](https://github.com/podlinker/artwork/blob/main/BRAND.md). Some landing tokens below predate that approval; they document deployed behavior, not an alternative official palette. Align them when editing the landing. The master-logo specifications remain open.
 
 ## Overview
 
@@ -165,7 +165,7 @@ People are ruled rows with circular initial avatars. Podcasts are flat, softly t
 ### Do:
 
 - **Do** keep people, followed podcasts and newly discovered episodes legible as separate stages.
-- **Do** keep the landing's currently implemented blue, cool paper, ink, lime and Barlow Condensed vocabulary coherent until a cross-product palette and typography are approved in the brand guide.
+- **Do** align new landing work with the approved brand palette and headline typography; keep existing deployed colors documented honestly until the landing itself is revised.
 - **Do** use flat rules and color fields to organize information, including on mobile.
 
 ### Don't:
