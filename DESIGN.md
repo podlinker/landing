@@ -25,6 +25,12 @@ typography:
     fontWeight: 700
     lineHeight: 0.98
     letterSpacing: "-0.015em"
+  feature:
+    fontFamily: "Barlow Condensed, Impact, sans-serif"
+    fontSize: "clamp(52px, 6.1vw, 82px)"
+    fontWeight: 800
+    lineHeight: 0.94
+    letterSpacing: "-0.022em"
   body:
     fontFamily: "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
     fontSize: "19px"
@@ -91,7 +97,7 @@ This file records the **current landing implementation**, not the corporate iden
 
 The public landing extends the app's current radio-programme-guide visual language into a more expressive, editorial introduction. Programme blue carries the header and opening statement; condensed display type gives the proposition its voice. The mechanism board makes the social relationship visible as a sequence of people, podcasts and episodes. This is a flat, ruled composition, not a stack of floating cards.
 
-The page moves from the programme-blue opening to the cool-paper mechanism board and closes with the programme-blue footer. A compact microphone mark anchors the brand. Examples in the mechanism board are clearly fictional; its visual treatment must not imply that following a podcast means listening to or recommending every episode.
+The page moves from the programme-blue opening to the cool-paper mechanism board, then a white editorial statement about the personal saved-episode RSS feed, and closes with the programme-blue footer. A compact microphone mark anchors the brand. Examples in the mechanism board are clearly fictional; its visual treatment must not imply that following a podcast means listening to or recommending every episode.
 
 **Key Characteristics:**
 
@@ -125,6 +131,7 @@ Barlow Condensed is self-hosted at weights 700 and 800 for the major headings an
 
 - **Display** (800; `clamp(62px, 7.1vw, 96px)`; `0.91` line-height) carries the hero proposition.
 - **Title** (700; `clamp(39px, 4vw, 55px)`; `0.98` line-height) labels the mechanism section.
+- **Feature** (800; `clamp(52px, 6.1vw, 82px)`; `0.94` line-height) carries the personal-podcast statement in the white band.
 - **Body** uses a familiar system sans for the hero introduction and explanatory diagram note.
 - **Label** (14px and 700 in navigation; smaller, heavier labels in the diagram) keeps navigation and example metadata compact.
 
@@ -132,9 +139,9 @@ Barlow Condensed is self-hosted at weights 700 and 800 for the major headings an
 
 ## Layout
 
-The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. The footer follows the mechanism section directly.
+The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. A white, two-column editorial band explains the saved-episode RSS feed without presenting a fake player or blending it into the social feed. The footer follows it directly.
 
-At `1050px`, the hero state note returns to normal flow and the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, and the mechanism becomes a vertical sequence. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
+At `1050px`, the hero state note returns to normal flow and the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, the mechanism becomes a vertical sequence and the personal-feed band stacks heading above copy. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
 
 ## Elevation & Depth
 

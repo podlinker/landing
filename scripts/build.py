@@ -9,38 +9,44 @@ BASE = "https://podlinker.com"
 COPY = {
     "ca": {
         "title": "Podlinker — Descobreix podcasts a través de la teva gent",
-        "description": "Segueix persones i descobreix els episodis dels podcasts que elles segueixen. Podlinker és una nova manera de trobar la teva propera escolta.",
-        "skip": "Salta al contingut", "navHow": "Com funciona", "langLabel": "Idioma del web",
+        "description": "Descobreix episodis a través de les persones que segueixes. Desa els que tries i escolta'ls en un podcast a la teva mida.",
+        "skip": "Salta al contingut", "navLabel": "Navegació principal", "navHow": "Com funciona", "navPersonal": "Podcast a mida", "langLabel": "Idioma del web",
         "hero": "El teu pròxim podcast comença amb algú que segueixes.",
         "intro": "Segueix persones. Descobreix els episodis dels podcasts que segueixen. Un feed fet de la teva gent, no d'una llista anònima.",
         "cta": "Descobreix com funciona", "building": "Podlinker està en construcció",
         "diagramHeading": "Així es construeix el teu feed", "youFollow": "Tu segueixes", "people": "persones", "theyFollow": "Elles segueixen", "podcasts": "podcasts", "youDiscover": "Tu descobreixes", "episodes": "episodis",
         "person1": "La Mar", "person2": "En Pol", "show1": "Fora de mapa", "show2": "Herbari", "sampleEpisode": "Un nou capítol", "sampleSource": "de Fora de mapa", "sampleLabel": "Exemple fictici",
         "note": "Seguir un podcast no vol dir haver escoltat ni recomanat tots els seus capítols.",
+        "personalTitle": "Un podcast a mida, amb els episodis que tries.",
+        "personalBody": "Desa episodis de podcasts diferents. Podlinker els reuneix en un feed RSS personal que pots afegir al teu reproductor habitual. La selecció s'actualitza quan hi afegeixes o en retires.",
         "footer": "Descobrir podcasts, de persona a persona.", "brandAria": "Podlinker, inici", "footerStatus": "Una nova manera de descobrir podcasts. En construcció.",
     },
     "es": {
         "title": "Podlinker — Descubre podcasts a través de tu gente",
-        "description": "Sigue a personas y descubre los episodios de los podcasts que siguen. Podlinker es una nueva manera de encontrar tu próxima escucha.",
-        "skip": "Ir al contenido", "navHow": "Cómo funciona", "langLabel": "Idioma de la web",
+        "description": "Descubre episodios a través de las personas que sigues. Guarda los que eliges y escúchalos en un podcast a tu medida.",
+        "skip": "Ir al contenido", "navLabel": "Navegación principal", "navHow": "Cómo funciona", "navPersonal": "Podcast a medida", "langLabel": "Idioma de la web",
         "hero": "Tu próximo podcast empieza con alguien a quien sigues.",
         "intro": "Sigue a personas. Descubre los episodios de los podcasts que siguen. Un feed hecho con tu gente, no con una lista anónima.",
         "cta": "Descubre cómo funciona", "building": "Podlinker está en construcción",
         "diagramHeading": "Así se construye tu feed", "youFollow": "Tú sigues a", "people": "personas", "theyFollow": "Ellas siguen", "podcasts": "podcasts", "youDiscover": "Tú descubres", "episodes": "episodios",
         "person1": "Mar", "person2": "Pol", "show1": "Fora de mapa", "show2": "Herbari", "sampleEpisode": "Un nuevo episodio", "sampleSource": "de Fora de mapa", "sampleLabel": "Ejemplo ficticio",
         "note": "Seguir un podcast no significa haber escuchado ni recomendado todos sus episodios.",
+        "personalTitle": "Un podcast a tu medida, con los episodios que eliges.",
+        "personalBody": "Guarda episodios de distintos podcasts. Podlinker los reúne en un feed RSS personal que puedes añadir a tu reproductor habitual. La selección se actualiza cuando añades o quitas episodios.",
         "footer": "Descubrir podcasts, de persona a persona.", "brandAria": "Podlinker, inicio", "footerStatus": "Una nueva manera de descubrir podcasts. En construcción.",
     },
     "en": {
         "title": "Podlinker — Discover podcasts through your people",
-        "description": "Follow people and discover episodes from the podcasts they follow. Podlinker is a new way to find your next listen.",
-        "skip": "Skip to content", "navHow": "How it works", "langLabel": "Website language",
+        "description": "Discover episodes through the people you follow. Save the ones you choose and listen to them in a podcast made for you.",
+        "skip": "Skip to content", "navLabel": "Main navigation", "navHow": "How it works", "navPersonal": "Your own podcast", "langLabel": "Website language",
         "hero": "Your next podcast starts with someone you follow.",
         "intro": "Follow people. Discover episodes from the podcasts they follow. A feed shaped by your people, not an anonymous chart.",
         "cta": "See how it works", "building": "Podlinker is in the making",
         "diagramHeading": "How your feed takes shape", "youFollow": "You follow", "people": "people", "theyFollow": "They follow", "podcasts": "podcasts", "youDiscover": "You discover", "episodes": "episodes",
         "person1": "Mar", "person2": "Pol", "show1": "Fora de mapa", "show2": "Herbari", "sampleEpisode": "A new episode", "sampleSource": "from Fora de mapa", "sampleLabel": "Fictional example",
         "note": "Following a podcast doesn't mean someone has listened to or recommended every episode.",
+        "personalTitle": "A podcast made from the episodes you choose.",
+        "personalBody": "Save episodes from different podcasts. Podlinker brings them together in a personal RSS feed you can add to your usual podcast player. Your selection updates as you add or remove episodes.",
         "footer": "Discover podcasts, person to person.", "brandAria": "Podlinker, home", "footerStatus": "A new way to discover podcasts. In the making.",
     },
 }
@@ -82,7 +88,7 @@ for locale, raw in COPY.items():
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="./" aria-label="{c["brandAria"]}"><span class="brand-mark"><img src="../assets/logo.svg" alt="" width="28" height="28"></span><span>podlinker<span class="brand-dot">.</span></span></a>
-      <nav class="header-nav" aria-label="{c["navHow"]}"><a href="#com-funciona">{c["navHow"]}</a></nav>
+      <nav class="header-nav" aria-label="{c["navLabel"]}"><a href="#com-funciona">{c["navHow"]}</a><a href="#podcast-a-mida">{c["navPersonal"]}</a></nav>
       <nav class="language-switch" aria-label="{c["langLabel"]}">{langs}</nav>
     </div>
   </header>
@@ -110,6 +116,12 @@ for locale, raw in COPY.items():
           <div class="board-column episode-column"><div class="board-caption">{c["youDiscover"]} <strong>{c["episodes"]}</strong></div><div class="episode-example"><div class="episode-index"><span>FEED</span></div><strong>{c["sampleEpisode"]}</strong><span>{c["sampleSource"]}</span><small>{c["sampleLabel"]}</small></div></div>
         </div>
         <p class="board-note">{c["note"]}</p>
+      </div>
+    </section>
+    <section class="personal-podcast" id="podcast-a-mida" aria-labelledby="personal-podcast-title">
+      <div class="wrap personal-podcast-inner">
+        <h2 id="personal-podcast-title">{c["personalTitle"]}</h2>
+        <p>{c["personalBody"]}</p>
       </div>
     </section>
   </main>
