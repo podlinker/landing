@@ -1,6 +1,6 @@
 # Podlinker landing
 
-Public pre-launch landing for Podlinker. It explains the people → podcasts → episodes discovery model without implying that a podcast follow is a listen or recommendation. The example people and shows are fictional. Product decisions are canonical in [`podlinker/project`](https://github.com/podlinker/project).
+Public landing for Podlinker. It explains the people → podcasts → episodes discovery model without implying that a podcast follow is a listen or recommendation. Diagrams describe real product behavior without fabricated account or episode activity. Product decisions are canonical in [`podlinker/project`](https://github.com/podlinker/project).
 
 Shared visual assets and the approved corporate identity direction live in [`podlinker/artwork/BRAND.md`](https://github.com/podlinker/artwork/blob/main/BRAND.md); this repository's [DESIGN.md](DESIGN.md) documents landing-specific implementation.
 
