@@ -2,7 +2,7 @@
 
 Canonical product decisions live in [podlinker/project](https://github.com/podlinker/project), especially `PRODUCT.md`, `DECISIONS.md` and `AUTH.md`. This file is a concise brief for the public landing; when facts differ, the canonical project repository wins.
 
-Podlinker is a social network for discovering podcast episodes through people you follow and the podcasts they follow. The primary feed shows all new episodes of those podcasts, deduplicated when multiple followed people follow the same podcast. Following a podcast never implies listening to or recommending each episode. Explicit recommendations belong to a separate later highlights experience.
+Podlinker is a social network for discovering podcast episodes through people you follow and the podcasts they follow. The primary feed shows all new episodes of those podcasts, deduplicated when multiple followed people follow the same podcast. Following a podcast never implies listening to or recommending each episode. Explicit recommendations belong to a separate Highlights experience, active in the closed staging pilot. Highlights follow the profile's existing visibility; they are not a separate public feed.
 
 People have varied podcast collections. The visitor follows people, sees the podcasts in their orbit, and discovers episodes through that network. The public catalog is provider-independent. Login will use a Podlinker account with email and one-time code. Spotify is out of scope.
 
