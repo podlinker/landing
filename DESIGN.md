@@ -97,7 +97,7 @@ This file records the **current landing implementation**, not the corporate iden
 
 The public landing extends the app's current radio-programme-guide visual language into a more expressive, editorial introduction. Programme blue carries the header and opening statement; condensed display type gives the proposition its voice. The mechanism board makes the social relationship visible as a sequence of people, podcasts and episodes. This is a flat, ruled composition, not a stack of floating cards.
 
-The page moves from the programme-blue opening to the cool-paper mechanism board, then a white editorial statement about the personal saved-episode RSS feed, and closes with the programme-blue footer. A compact microphone mark anchors the brand. Examples in the mechanism board are clearly fictional; its visual treatment must not imply that following a podcast means listening to or recommending every episode.
+The page moves from the programme-blue opening to the cool-paper mechanism board, then a ruled Highlights band for explicit recommendations, a white editorial statement and flat three-stage diagram for the private saved-episode RSS feed, and the programme-blue footer. A compact microphone mark anchors the brand. Examples in all three explanatory diagrams are clearly fictional; the feed diagram must not imply that following a podcast means listening to or recommending every episode.
 
 **Key Characteristics:**
 
@@ -139,9 +139,9 @@ Barlow Condensed is self-hosted at weights 700 and 800 for the major headings an
 
 ## Layout
 
-The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. A white, two-column editorial band explains the saved-episode RSS feed without presenting a fake player or blending it into the social feed. The footer follows it directly.
+The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as person column → arrow → podcast column → arrow → episode column, enclosed by two strong ink rules. The Highlights band pairs a direct headline and explanation with one flat fictional episode recommendation, distinct from the automatic feed. The white personal-podcast band pairs editorial copy with a three-stage diagram: saved episodes → private RSS → usual podcast player. The final stage is explanatory, not a fake player UI. The footer follows it directly.
 
-At `1050px`, the hero state note returns to normal flow and the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, the mechanism becomes a vertical sequence and the personal-feed band stacks heading above copy. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
+At `1050px`, the hero state note returns to normal flow and the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, and all diagrams become vertical sequences. The Highlights and personal-feed bands stack heading above examples. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
 
 ## Elevation & Depth
 
@@ -166,6 +166,10 @@ The header has a blue field, compact brand lockup and underlined-on-hover naviga
 ### Mechanism board
 
 People are ruled rows with circular initial avatars. Podcasts are flat, softly tinted rows with a small uppercase type label and condensed name. The destination episode is a solid lime block with a blue index marker, a condensed example title and a visible fictional-example label. Arrows express the relationship between the three columns; they rotate with the mobile sequence.
+
+### Highlights and saved episodes
+
+The Highlights sample explicitly names the person who chose to recommend an episode. It is a fictional example, not social proof or a live account card. Saved episodes form a separate, private selection; their diagram leads to one private RSS channel and then the listener's existing podcast player. Flat color fields and arrows make the outcome scannable without pretending Podlinker plays audio itself.
 
 ## Do's and Don'ts
 
