@@ -16,9 +16,8 @@ COPY = {
         "cta": "Descobreix com funciona",
         "diagramHeading": "Així es construeix el teu feed", "youFollow": "Tu segueixes", "people": "persones", "theyFollow": "Elles segueixen", "podcasts": "podcasts", "youDiscover": "Tu descobreixes", "episodes": "episodis",
         "networkLabel": "La teva xarxa", "networkDetail": "Perfils que has triat seguir", "sharedLabel": "La seva col·lecció", "sharedDetail": "Podcasts que comparteixen amb la xarxa", "feedLabel": "Capítols nous", "feedDetail": "Dels podcasts que segueixen",
-        "highlightsTitle": "Quan algú recomana un episodi, ho saps.",
-        "highlightsBody": "El feed et mostra capítols dels podcasts de la gent que segueixes. A Destacats hi trobes els episodis que han triat recomanar expressament.",
-        "highlightsSignal": "Una recomanació és una tria.", "highlightsDetail": "No es crea per seguir un podcast ni per desar un capítol.",
+        "highlightsTitle": "Destacats: les recomanacions de la teva xarxa.",
+        "highlightsBody": "A Destacats hi trobes episodis que les persones que segueixes han recomanat expressament. El feed principal, en canvi, mostra els capítols nous dels podcasts que segueixen.",
         "personalTitle": "Els episodis que tries, junts al teu reproductor.",
         "personalBody": "Desa capítols de podcasts diferents. Podlinker els reuneix en un RSS privat que pots afegir al teu reproductor habitual i que s'actualitza quan canvies la selecció.",
         "savedLabel": "Episodis desats", "savedDetail": "Els capítols que tries", "rssLabel": "El teu RSS privat", "rssDetail": "La teva selecció, sempre al dia", "playerLabel": "El teu reproductor", "playerDetail": "Escolta'ls on ja escoltes podcasts",
@@ -33,9 +32,8 @@ COPY = {
         "cta": "Descubre cómo funciona",
         "diagramHeading": "Así se construye tu feed", "youFollow": "Tú sigues a", "people": "personas", "theyFollow": "Ellas siguen", "podcasts": "podcasts", "youDiscover": "Tú descubres", "episodes": "episodios",
         "networkLabel": "Tu red", "networkDetail": "Perfiles que has elegido seguir", "sharedLabel": "Su colección", "sharedDetail": "Podcasts que comparten con la red", "feedLabel": "Capítulos nuevos", "feedDetail": "De los podcasts que siguen",
-        "highlightsTitle": "Cuando alguien recomienda un episodio, lo sabes.",
-        "highlightsBody": "El feed te muestra capítulos de los podcasts de la gente que sigues. En Destacados encuentras los episodios que han elegido recomendar expresamente.",
-        "highlightsSignal": "Una recomendación es una elección.", "highlightsDetail": "No se crea por seguir un podcast ni por guardar un episodio.",
+        "highlightsTitle": "Destacados: las recomendaciones de tu red.",
+        "highlightsBody": "En Destacados encuentras episodios que las personas a las que sigues han recomendado expresamente. El feed principal, en cambio, muestra los capítulos nuevos de los podcasts que siguen.",
         "personalTitle": "Los episodios que eliges, juntos en tu reproductor.",
         "personalBody": "Guarda capítulos de distintos podcasts. Podlinker los reúne en un RSS privado que puedes añadir a tu reproductor habitual y que se actualiza cuando cambias la selección.",
         "savedLabel": "Episodios guardados", "savedDetail": "Los capítulos que eliges", "rssLabel": "Tu RSS privado", "rssDetail": "Tu selección, siempre al día", "playerLabel": "Tu reproductor", "playerDetail": "Escúchalos donde ya escuchas podcasts",
@@ -50,9 +48,8 @@ COPY = {
         "cta": "See how it works",
         "diagramHeading": "How your feed takes shape", "youFollow": "You follow", "people": "people", "theyFollow": "They follow", "podcasts": "podcasts", "youDiscover": "You discover", "episodes": "episodes",
         "networkLabel": "Your network", "networkDetail": "Profiles you chose to follow", "sharedLabel": "Their collection", "sharedDetail": "Podcasts they share with the network", "feedLabel": "New episodes", "feedDetail": "From the podcasts they follow",
-        "highlightsTitle": "When someone recommends an episode, you know.",
-        "highlightsBody": "Your feed shows episodes from podcasts followed by your people. Highlights is where you find the episodes they've explicitly chosen to recommend.",
-        "highlightsSignal": "A recommendation is a choice.", "highlightsDetail": "Following a podcast or saving an episode does not create one.",
+        "highlightsTitle": "Highlights: what your network recommends.",
+        "highlightsBody": "Highlights shows episodes explicitly recommended by people you follow. Your main feed, by contrast, shows new episodes from podcasts they follow.",
         "personalTitle": "The episodes you choose, together in your player.",
         "personalBody": "Save episodes from different podcasts. Podlinker brings them together in a private RSS feed you can add to your usual podcast player. It updates when you change your selection.",
         "savedLabel": "Saved episodes", "savedDetail": "The episodes you choose", "rssLabel": "Your private RSS", "rssDetail": "Your selection, always up to date", "playerLabel": "Your podcast player", "playerDetail": "Listen where you already listen to podcasts",
@@ -127,8 +124,8 @@ for locale, raw in COPY.items():
     </section>
     <section class="highlights" id="destacats" aria-labelledby="highlights-title">
       <div class="wrap highlights-inner">
-        <div class="highlights-copy"><h2 id="highlights-title">{c["highlightsTitle"]}</h2><p>{c["highlightsBody"]}</p></div>
-        <div class="highlight-principle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6.1 6.7.9-4.8 4.7 1.1 6.6L12 17.2l-5.9 3.1 1.1-6.6L2.4 9l6.7-.9L12 2Z"/></svg><strong>{c["highlightsSignal"]}</strong><span>{c["highlightsDetail"]}</span></div>
+        <h2 id="highlights-title">{c["highlightsTitle"]}</h2>
+        <p>{c["highlightsBody"]}</p>
       </div>
     </section>
     <section class="personal-podcast" id="podcast-a-mida" aria-labelledby="personal-podcast-title">

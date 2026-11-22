@@ -131,7 +131,7 @@ Barlow Condensed is self-hosted at weights 700 and 800 for the major headings an
 
 ## Layout
 
-The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as people followed → arrow → their shared podcasts → arrow → new episodes, enclosed by two strong ink rules. The Highlights band pairs a direct headline with an explicit-recommendation principle, distinct from the automatic feed. The white personal-podcast band pairs editorial copy with a three-stage diagram: saved episodes → private RSS → usual podcast player. The final stage is explanatory, not a fake player UI. The footer follows it directly.
+The shared wrapper has a maximum width of `1280px` and `44px` side gutters on desktop. The hero is a wide blue field with a large heading above a description-and-action row. Below it, a five-track mechanism board reads as people followed → arrow → their shared podcasts → arrow → new episodes, enclosed by two strong ink rules. The Highlights band pairs a direct headline with a plain-language contrast between explicit recommendations and the automatic feed; it has no decorative card. The white personal-podcast band pairs editorial copy with a three-stage diagram: saved episodes → private RSS → usual podcast player. The final stage is explanatory, not a fake player UI. The footer follows it directly.
 
 At `1050px`, the hero description and action stack. At `760px`, the wrapper narrows to `18px` side gutters, the navigation wraps below the brand, and all diagrams become vertical sequences. The Highlights and personal-feed bands stack heading above their diagrams. A `390px` adjustment tightens header and diagram text. Controls retain at least the observed `44px` navigation/language hit height where applicable.
 
@@ -153,7 +153,7 @@ The primary call to action is a square lime link to the mechanism section (`min-
 
 ### Header and language control
 
-The header has a blue field, compact brand lockup and underlined-on-hover navigation. CA / ES / EN sits in a thin outlined group; the active language is filled lime. On narrow screens, navigation wraps to its own row without hiding the language choices.
+The header stays visible at the top while scrolling, with enough scroll offset that in-page section links do not hide content beneath it. It has a blue field, compact brand lockup and underlined-on-hover navigation. CA / ES / EN sits in a thin outlined group; the active language is filled lime. On narrow screens, navigation wraps to its own row without hiding the language choices.
 
 ### Mechanism board
 
@@ -161,7 +161,7 @@ Three flat stages describe the actual relationship: the listener's chosen networ
 
 ### Highlights and saved episodes
 
-The Highlights band states that recommending an episode is an explicit action; it does not invent a recommendation by any person. Saved episodes form a separate, private selection; their diagram leads to one private RSS channel and then the listener's existing podcast player. Flat color fields and arrows make the outcome scannable without pretending Podlinker plays audio itself.
+The Highlights band directly explains that it contains episodes explicitly recommended by followed people, unlike the main feed of new episodes from podcasts they follow. It does not invent a recommendation by any person. Saved episodes form a separate, private selection; their diagram leads to one private RSS channel and then the listener's existing podcast player. Flat color fields and arrows make the outcome scannable without pretending Podlinker plays audio itself.
 
 ## Do's and Don'ts
 
