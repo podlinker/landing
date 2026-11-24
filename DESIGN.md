@@ -161,7 +161,7 @@ Three flat stages describe the actual relationship: the listener's chosen networ
 
 ### Highlights and saved episodes
 
-The Highlights band directly explains that it contains episodes explicitly recommended by followed people, unlike the main feed of new episodes from podcasts they follow. It does not invent a recommendation by any person. Saved episodes form a separate, private selection; their diagram leads to one private RSS channel and then the listener's existing podcast player. Flat color fields and arrows make the outcome scannable without pretending Podlinker plays audio itself.
+The Highlights band directly explains that it contains episodes explicitly recommended by followed people, unlike Activity, which shows both their recommendations and new episodes from podcasts they follow. It does not invent a recommendation by any person. Saved episodes form a separate, private selection; their diagram leads to one private RSS channel and then the listener's existing podcast player. Flat color fields and arrows make the outcome scannable without pretending Podlinker plays audio itself.
 
 ## Do's and Don'ts
 

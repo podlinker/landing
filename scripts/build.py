@@ -17,7 +17,7 @@ COPY = {
         "diagramHeading": "Així es construeix el teu feed", "youFollow": "Tu segueixes", "people": "persones", "theyFollow": "Elles segueixen", "podcasts": "podcasts", "youDiscover": "Tu descobreixes", "episodes": "episodis",
         "networkLabel": "La teva xarxa", "networkDetail": "Perfils que has triat seguir", "sharedLabel": "La seva col·lecció", "sharedDetail": "Podcasts que comparteixen amb la xarxa", "feedLabel": "Capítols nous", "feedDetail": "Dels podcasts que segueixen",
         "highlightsTitle": "Destacats: les recomanacions de la teva xarxa.",
-        "highlightsBody": "A Destacats hi trobes episodis que les persones que segueixes han recomanat expressament. El feed principal, en canvi, mostra els capítols nous dels podcasts que segueixen.",
+        "highlightsBody": "A Activitat hi trobes capítols nous dels podcasts que segueix la teva gent i les seves recomanacions. A Destacats només veus els episodis que han recomanat expressament.",
         "personalTitle": "Els episodis que tries, junts al teu reproductor.",
         "personalBody": "Desa capítols de podcasts diferents. Podlinker els reuneix en un RSS privat que pots afegir al teu reproductor habitual i que s'actualitza quan canvies la selecció.",
         "savedLabel": "Episodis desats", "savedDetail": "Els capítols que tries", "rssLabel": "El teu RSS privat", "rssDetail": "La teva selecció, sempre al dia", "playerLabel": "El teu reproductor", "playerDetail": "Escolta'ls on ja escoltes podcasts",
@@ -33,7 +33,7 @@ COPY = {
         "diagramHeading": "Así se construye tu feed", "youFollow": "Tú sigues a", "people": "personas", "theyFollow": "Ellas siguen", "podcasts": "podcasts", "youDiscover": "Tú descubres", "episodes": "episodios",
         "networkLabel": "Tu red", "networkDetail": "Perfiles que has elegido seguir", "sharedLabel": "Su colección", "sharedDetail": "Podcasts que comparten con la red", "feedLabel": "Capítulos nuevos", "feedDetail": "De los podcasts que siguen",
         "highlightsTitle": "Destacados: las recomendaciones de tu red.",
-        "highlightsBody": "En Destacados encuentras episodios que las personas a las que sigues han recomendado expresamente. El feed principal, en cambio, muestra los capítulos nuevos de los podcasts que siguen.",
+        "highlightsBody": "En Actividad encuentras nuevos episodios de los podcasts que sigue tu gente y sus recomendaciones. En Destacados solo ves los episodios que han recomendado expresamente.",
         "personalTitle": "Los episodios que eliges, juntos en tu reproductor.",
         "personalBody": "Guarda capítulos de distintos podcasts. Podlinker los reúne en un RSS privado que puedes añadir a tu reproductor habitual y que se actualiza cuando cambias la selección.",
         "savedLabel": "Episodios guardados", "savedDetail": "Los capítulos que eliges", "rssLabel": "Tu RSS privado", "rssDetail": "Tu selección, siempre al día", "playerLabel": "Tu reproductor", "playerDetail": "Escúchalos donde ya escuchas podcasts",
@@ -49,7 +49,7 @@ COPY = {
         "diagramHeading": "How your feed takes shape", "youFollow": "You follow", "people": "people", "theyFollow": "They follow", "podcasts": "podcasts", "youDiscover": "You discover", "episodes": "episodes",
         "networkLabel": "Your network", "networkDetail": "Profiles you chose to follow", "sharedLabel": "Their collection", "sharedDetail": "Podcasts they share with the network", "feedLabel": "New episodes", "feedDetail": "From the podcasts they follow",
         "highlightsTitle": "Highlights: what your network recommends.",
-        "highlightsBody": "Highlights shows episodes explicitly recommended by people you follow. Your main feed, by contrast, shows new episodes from podcasts they follow.",
+        "highlightsBody": "Activity brings together new episodes from the podcasts your people follow and their recommendations. Highlights shows only the episodes they explicitly recommend.",
         "personalTitle": "The episodes you choose, together in your player.",
         "personalBody": "Save episodes from different podcasts. Podlinker brings them together in a private RSS feed you can add to your usual podcast player. It updates when you change your selection.",
         "savedLabel": "Saved episodes", "savedDetail": "The episodes you choose", "rssLabel": "Your private RSS", "rssDetail": "Your selection, always up to date", "playerLabel": "Your podcast player", "playerDetail": "Listen where you already listen to podcasts",
@@ -156,3 +156,45 @@ for locale, raw in COPY.items():
     + "".join(f"  <url><loc>{BASE}/{locale}/</loc></url>\n" for locale in COPY)
     + '</urlset>\n'
 )
+
+NOT_FOUND = {
+    "ca": ("No hem trobat aquesta pàgina", "Torna a la portada"),
+    "es": ("No encontramos esta página", "Volver al inicio"),
+    "en": ("This page couldn’t be found", "Back to the homepage"),
+}
+
+fallback_sections = "\n".join(
+    f'    <section lang="{locale}" data-error-language><h1>{title}</h1>'
+    f'<a class="button button-lime" href="/{locale}/">{home}</a></section>'
+    for locale, (title, home) in NOT_FOUND.items()
+)
+fallback_links = "\n".join(
+    f'      <a href="/{locale}/" lang="{locale}">{name}</a>'
+    for locale, name in LANG_NAMES.items()
+)
+(ROOT / "404.html").write_text(f'''<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Podlinker</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script defer src="/assets/not-found.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/"><span class="brand-mark"><img src="/assets/logo.svg" alt="" width="28" height="28"></span><span>podlinker<span class="brand-dot">.</span></span></a>
+    </div>
+  </header>
+  <main class="wrap landing-not-found">
+{fallback_sections}
+    <nav aria-label="Català / Español / English">
+{fallback_links}
+    </nav>
+  </main>
+</body>
+</html>
+''')

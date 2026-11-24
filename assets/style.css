@@ -76,3 +76,14 @@ button,a{-webkit-tap-highlight-color:transparent}
 @media(max-width:760px){:root{--header-offset:140px}.wrap{width:min(100% - 36px,620px)}.header-inner{min-height:65px;gap:12px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}.brand{font-size:21px}.brand-mark{width:31px;height:31px}.brand-mark img{width:25px;height:25px}.header-nav{order:3;width:100%;margin:1px 0 0;font-size:13px}.header-nav a{min-height:44px}.language-switch{margin-left:auto}.language-switch a{min-width:40px;min-height:44px}.hero-inner{padding-top:47px;padding-bottom:50px}.hero h1{max-width:11ch;font-size:clamp(54px,11.5vw,78px)}.hero-bottom{margin-top:30px}.hero-bottom p{font-size:17px}.mechanism{padding:64px 0}.section-heading{display:block}.section-heading h2{font-size:42px}.section-rule{display:block;margin-top:15px;transform:none}.network-board{grid-template-columns:1fr}.board-column{padding:18px 0 8px}.board-caption{min-height:30px}.board-arrow{height:35px;justify-content:flex-start;padding-left:27px;transform:rotate(90deg);transform-origin:24px center}.board-arrow span{width:20px}.mechanism-stage{min-height:105px}.episode-column{padding-bottom:20px}.highlights{padding:66px 0}.highlights-inner{display:block}.highlights h2{font-size:clamp(48px,10.5vw,68px)}.highlights-inner p{margin-top:22px;font-size:17px}.personal-podcast{padding:66px 0 72px}.personal-podcast-inner{display:block}.personal-podcast h2{font-size:clamp(50px,10.8vw,70px)}.personal-podcast-inner p{margin-top:26px;font-size:17px}.saved-flow{grid-template-columns:1fr;gap:0;margin-top:35px;padding:14px 0}.flow-stage{min-height:0}.flow-arrow{height:38px;justify-content:flex-start;padding-left:37px}.flow-arrow span{transform:rotate(90deg)}.rss-stage,.player-stage{min-height:145px}}
 @media(max-width:390px){.brand{font-size:19px;gap:8px}.hero h1{font-size:50px}.header-nav{gap:10px}.header-nav a{font-size:12px}.button{gap:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+
+.landing-not-found { padding-block: clamp(56px, 10vw, 112px); }
+.landing-not-found section + section { margin-block-start: 32px; }
+.landing-not-found h1 {
+  max-width: 16ch;
+  margin: 0 0 28px;
+  font: 800 clamp(42px, 7vw, 82px)/.95 'Barlow Condensed', sans-serif;
+  text-wrap: balance;
+}
+.landing-not-found nav { display: flex; flex-wrap: wrap; gap: 0 16px; margin-top: 24px; }
+.landing-not-found nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--blue-deep); text-decoration: underline; text-underline-offset: 3px; }
