@@ -11,7 +11,9 @@
   function updateDestination() {
     frame = 0;
     const readingLine = header.getBoundingClientRect().bottom + 32;
-    const section = sections.findLast(item => item.getBoundingClientRect().top <= readingLine);
+    const scroller = document.scrollingElement;
+    const atEnd = scroller.scrollTop > 0 && scroller.scrollHeight - scroller.scrollTop <= scroller.clientHeight + 2;
+    const section = atEnd ? sections.at(-1) : sections.findLast(item => item.getBoundingClientRect().top <= readingLine);
     setDestination(section ? '#' + section.id : '');
   }
 
