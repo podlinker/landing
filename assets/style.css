@@ -87,3 +87,4 @@ button,a{-webkit-tap-highlight-color:transparent}
 }
 .landing-not-found nav { display: flex; flex-wrap: wrap; gap: 0 16px; margin-top: 24px; }
 .landing-not-found nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--blue-deep); text-decoration: underline; text-underline-offset: 3px; }
+.landing-not-found :focus-visible { outline-color: var(--blue-deep); }
