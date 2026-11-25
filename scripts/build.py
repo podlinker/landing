@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 """Build the three static, SEO-addressable language variants of the landing."""
+from hashlib import sha256
 from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://podlinker.com"
+
+# A returning browser must not pair new markup with older cached styles or scripts.
+ASSET_URLS = {
+    name: f"assets/{name}?v={sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:16]}"
+    for name in ("style.css", "site.js", "redirect.js")
+}
 
 COPY = {
     "ca": {
@@ -89,8 +96,8 @@ for locale, raw in COPY.items():
   <link rel="alternate" hreflang="x-default" href="{BASE}/">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="preload" href="../assets/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/style.css">
-  <script defer src="../assets/site.js"></script>
+  <link rel="stylesheet" href="../{ASSET_URLS["style.css"]}">
+  <script defer src="../{ASSET_URLS["site.js"]}"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">{c["skip"]}</a>
@@ -161,7 +168,7 @@ for locale, raw in COPY.items():
 '''
     (ROOT / locale / "index.html").write_text(html)
 
-(ROOT / "index.html").write_text('''<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Podlinker</title><script src="assets/redirect.js"></script></head><body><p><a href="ca/">Podlinker · Català</a></p><p><a href="es/">Español</a> · <a href="en/">English</a></p></body></html>''')
+(ROOT / "index.html").write_text(f'''<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Podlinker</title><script src="{ASSET_URLS["redirect.js"]}"></script></head><body><p><a href="ca/">Podlinker · Català</a></p><p><a href="es/">Español</a> · <a href="en/">English</a></p></body></html>''')
 
 (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
 (ROOT / "sitemap.xml").write_text(
