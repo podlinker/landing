@@ -1,303 +1,50 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-25T20:57:42Z",
+  "generatedAt": "2026-11-25T21:08:28Z",
   "title": "Design System: Podlinker Landing",
   "extensions": {
-    "colorMeta": {
-      "programme-blue": {
-        "role": "primary",
-        "displayName": "Programme Blue",
-        "canonical": "#3047cd",
-        "tonalRamp": [
-          "oklch(15% 0.058 269.0)",
-          "oklch(27% 0.114 269.0)",
-          "oklch(39% 0.161 269.0)",
-          "oklch(51% 0.207 269.0)",
-          "oklch(63% 0.207 269.0)",
-          "oklch(75% 0.161 269.0)",
-          "oklch(86% 0.103 269.0)",
-          "oklch(95% 0.046 269.0)"
-        ]
-      },
-      "programme-blue-deep": {
-        "role": "primary",
-        "displayName": "Programme Blue Deep",
-        "canonical": "#2336a9",
-        "tonalRamp": [
-          "oklch(15% 0.051 268.7)",
-          "oklch(27% 0.101 268.7)",
-          "oklch(39% 0.143 268.7)",
-          "oklch(51% 0.183 268.7)",
-          "oklch(63% 0.183 268.7)",
-          "oklch(75% 0.143 268.7)",
-          "oklch(86% 0.092 268.7)",
-          "oklch(95% 0.040 268.7)"
-        ]
-      },
-      "ink": {
-        "role": "neutral",
-        "displayName": "Ink",
-        "canonical": "#182334",
-        "tonalRamp": [
-          "oklch(15% 0.010 258.9)",
-          "oklch(27% 0.020 258.9)",
-          "oklch(39% 0.028 258.9)",
-          "oklch(51% 0.036 258.9)",
-          "oklch(63% 0.036 258.9)",
-          "oklch(75% 0.028 258.9)",
-          "oklch(86% 0.018 258.9)",
-          "oklch(95% 0.008 258.9)"
-        ]
-      },
-      "cool-paper": {
-        "role": "neutral",
-        "displayName": "Cool Paper",
-        "canonical": "#f4f6f5",
-        "tonalRamp": [
-          "oklch(15% 0.001 165.1)",
-          "oklch(27% 0.001 165.1)",
-          "oklch(39% 0.002 165.1)",
-          "oklch(51% 0.002 165.1)",
-          "oklch(63% 0.002 165.1)",
-          "oklch(75% 0.002 165.1)",
-          "oklch(86% 0.001 165.1)",
-          "oklch(95% 0.001 165.1)"
-        ]
-      },
-      "signal-lime": {
-        "role": "primary",
-        "displayName": "Signal Lime",
-        "canonical": "#e5f468",
-        "tonalRamp": [
-          "oklch(15% 0.046 114.8)",
-          "oklch(27% 0.090 114.8)",
-          "oklch(39% 0.128 114.8)",
-          "oklch(51% 0.164 114.8)",
-          "oklch(63% 0.164 114.8)",
-          "oklch(75% 0.128 114.8)",
-          "oklch(86% 0.082 114.8)",
-          "oklch(95% 0.036 114.8)"
-        ]
-      },
-      "muted-ink": {
-        "role": "neutral",
-        "displayName": "Muted Ink",
-        "canonical": "#53616c",
-        "tonalRamp": [
-          "oklch(15% 0.007 241.8)",
-          "oklch(27% 0.014 241.8)",
-          "oklch(39% 0.019 241.8)",
-          "oklch(51% 0.025 241.8)",
-          "oklch(63% 0.025 241.8)",
-          "oklch(75% 0.019 241.8)",
-          "oklch(86% 0.012 241.8)",
-          "oklch(95% 0.005 241.8)"
-        ]
-      },
-      "rule": {
-        "role": "neutral",
-        "displayName": "Rule",
-        "canonical": "#cbd4d5",
-        "tonalRamp": [
-          "oklch(15% 0.003 204.9)",
-          "oklch(27% 0.005 204.9)",
-          "oklch(39% 0.008 204.9)",
-          "oklch(51% 0.010 204.9)",
-          "oklch(63% 0.010 204.9)",
-          "oklch(75% 0.008 204.9)",
-          "oklch(86% 0.005 204.9)",
-          "oklch(95% 0.002 204.9)"
-        ]
-      },
-      "people-field": {
-        "role": "secondary",
-        "displayName": "People Field",
-        "canonical": "#f9e4d9",
-        "tonalRamp": [
-          "oklch(15% 0.008 49.6)",
-          "oklch(27% 0.015 49.6)",
-          "oklch(39% 0.021 49.6)",
-          "oklch(51% 0.027 49.6)",
-          "oklch(63% 0.027 49.6)",
-          "oklch(75% 0.021 49.6)",
-          "oklch(86% 0.014 49.6)",
-          "oklch(95% 0.006 49.6)"
-        ]
-      },
-      "podcast-field": {
-        "role": "secondary",
-        "displayName": "Podcast Field",
-        "canonical": "#f5edc8",
-        "tonalRamp": [
-          "oklch(15% 0.014 97.1)",
-          "oklch(27% 0.027 97.1)",
-          "oklch(39% 0.038 97.1)",
-          "oklch(51% 0.049 97.1)",
-          "oklch(63% 0.049 97.1)",
-          "oklch(75% 0.038 97.1)",
-          "oklch(86% 0.025 97.1)",
-          "oklch(95% 0.011 97.1)"
-        ]
-      },
-      "player-field": {
-        "role": "secondary",
-        "displayName": "Player Field",
-        "canonical": "#e6eaff",
-        "tonalRamp": [
-          "oklch(15% 0.008 277.2)",
-          "oklch(27% 0.016 277.2)",
-          "oklch(39% 0.022 277.2)",
-          "oklch(51% 0.029 277.2)",
-          "oklch(63% 0.029 277.2)",
-          "oklch(75% 0.022 277.2)",
-          "oklch(86% 0.014 277.2)",
-          "oklch(95% 0.006 277.2)"
-        ]
-      }
-    },
-    "typographyMeta": {
-      "display": {
-        "displayName": "Display",
-        "purpose": "Hero proposition."
-      },
-      "title": {
-        "displayName": "Title",
-        "purpose": "Mechanism section heading."
-      },
-      "body": {
-        "displayName": "Body",
-        "purpose": "Hero explanation and story paragraphs."
-      },
-      "label": {
-        "displayName": "Label",
-        "purpose": "Navigation and compact metadata."
-      },
-      "feature": {
-        "displayName": "Feature",
-        "purpose": "Personal-podcast statement."
-      }
-    },
-    "motion": [
-      {
-        "name": "button-color",
-        "value": "background-color .2s ease, color .2s ease",
-        "purpose": "In-page action hover transition; disabled for reduced motion."
-      }
-    ],
     "breakpoints": [
       {
-        "name": "hero-stack",
-        "value": "1050px"
-      },
-      {
         "name": "single-column",
-        "value": "760px"
+        "value": "800px"
       },
       {
-        "name": "compact-phone",
-        "value": "390px"
+        "name": "vertical-saved-flow",
+        "value": "520px"
       }
     ]
   },
   "components": [
     {
-      "name": "Lime In-page Action",
+      "name": "In-page action",
       "kind": "button",
-      "refersTo": "button-lime",
-      "description": "Primary action leading to the mechanism section.",
-      "html": "<a class=\"ds-button ds-button-lime\" href=\"#com-funciona\">Descobreix com funciona <svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11m-5-5 5 5-5 5\"/></svg></a>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:57px;padding:0 19px;font-size:15px;font-weight:800;white-space:nowrap;transition:background-color .2s ease,color .2s ease}.ds-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-button-lime{color:var(--ink,#182334);background:var(--lime,#e5f468)}.ds-button-lime:hover{background:#f1faad}a{text-decoration:none}a:focus-visible{outline:3px solid var(--lime,#e5f468);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+      "refersTo": "button-primary",
+      "html": "<a class=\"ds-button\" href=\"#com-funciona\">Mira com funciona <svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11m-5-5 5 5-5 5\"/></svg></a>",
+      "css": ".ds-button {\n  width: fit-content;\n  display: inline-flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 20px;\n  min-height: 50px;\n  padding: 8px 16px;\n  background: var(--white,#fff);\n  color: var(--blue,#2544bd);\n  font-size: 15px;\n  font-weight: 800;\n  text-decoration: none;\n}\n.ds-button:hover { background: var(--blue-light,#e8edfb); }\n.ds-button svg { flex: 0 0 20px; width: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }"
     },
     {
-      "name": "Header Navigation",
-      "kind": "nav",
-      "refersTo": "header-nav-link",
-      "description": "Flat navigation links with a lime hover underline.",
-      "html": "<nav class=\"ds-header-nav\" aria-label=\"Navegació principal\"><a href=\"#com-funciona\">Com funciona</a><a href=\"#destacats\">Destacats</a><a href=\"#podcast-a-mida\">Podcast a mida</a></nav>",
-      "css": ".ds-header-nav{display:flex;align-items:center;gap:33px;margin-left:auto;font-size:14px;font-weight:700}.ds-header-nav a{min-height:44px;display:inline-flex;align-items:center;gap:5px;border-bottom:2px solid transparent}.ds-header-nav a:hover{border-bottom-color:var(--lime,#e5f468)}nav{background:var(--blue,#3047cd);color:white}a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--lime,#e5f468);outline-offset:4px}"
-    },
-    {
-      "name": "Active Language",
-      "kind": "nav",
-      "refersTo": "language-choice-active",
-      "description": "Selected language in the compact CA / ES / EN switch.",
-      "html": "<nav class=\"ds-language-switch\" aria-label=\"Idioma del web\"><a href=\"../ca/\" lang=\"ca\" hreflang=\"ca\" data-lang=\"ca\" class=\"ds-active\" aria-current=\"page\">CA</a>\n<a href=\"../es/\" lang=\"es\" hreflang=\"es\" data-lang=\"es\" class=\"\" >ES</a>\n<a href=\"../en/\" lang=\"en\" hreflang=\"en\" data-lang=\"en\" class=\"\" >EN</a></nav>",
-      "css": ".ds-language-switch{display:flex;align-items:center;gap:2px;margin-left:10px;border:1px solid #c9d1fc;padding:2px}.ds-language-switch a{display:grid;place-items:center;min-width:44px;min-height:44px;padding:2px 4px;font-size:12px;font-weight:800;letter-spacing:.03em;color:#e9edff}.ds-language-switch a:hover{color:var(--lime,#e5f468)}.ds-language-switch a.ds-active{background:var(--lime,#e5f468);color:var(--ink,#182334)}nav{background:var(--blue,#3047cd);width:max-content}a{text-decoration:none}a:focus-visible{outline:3px solid var(--lime,#e5f468);outline-offset:4px}"
-    },
-    {
-      "name": "People Stage",
+      "name": "Listening guide",
       "kind": "custom",
-      "refersTo": "mechanism-stage",
-      "description": "The people the listener has chosen to follow.",
-      "html": "<div class=\"ds-mechanism-stage ds-people-stage\"><strong>La teva xarxa</strong><span>Perfils que has triat seguir</span></div>",
-      "css": ".ds-mechanism-stage{display:flex;flex-direction:column;justify-content:flex-end;gap:8px;min-height:137px;padding:17px 19px}.ds-mechanism-stage strong{font-family:Barlow Condensed,Impact,sans-serif;font-size:clamp(28px,3vw,39px);font-weight:800;line-height:1}.ds-mechanism-stage span{max-width:29ch;font-size:13px;font-weight:700;line-height:1.35}.ds-people-stage{background:var(--people-field,#f9e4d9)}"
-    },
-    {
-      "name": "Podcast Stage",
-      "kind": "custom",
-      "refersTo": "mechanism-stage",
-      "description": "Podcasts those people share with their network.",
-      "html": "<div class=\"ds-mechanism-stage ds-shows-stage\"><strong>La seva col·lecció</strong><span>Podcasts que comparteixen amb la xarxa</span></div>",
-      "css": ".ds-mechanism-stage{display:flex;flex-direction:column;justify-content:flex-end;gap:8px;min-height:137px;padding:17px 19px}.ds-mechanism-stage strong{font-family:Barlow Condensed,Impact,sans-serif;font-size:clamp(28px,3vw,39px);font-weight:800;line-height:1}.ds-mechanism-stage span{max-width:29ch;font-size:13px;font-weight:700;line-height:1.35}.ds-shows-stage{background:var(--podcast-field,#f5edc8)}"
-    },
-    {
-      "name": "Episode Stage",
-      "kind": "custom",
-      "refersTo": "episode-stage",
-      "description": "New episodes that reach the listener’s feed.",
-      "html": "<div class=\"ds-mechanism-stage ds-episode-stage\"><strong>Capítols nous</strong><span>Dels podcasts que segueixen</span></div>",
-      "css": ".ds-mechanism-stage{display:flex;flex-direction:column;justify-content:flex-end;gap:8px;min-height:137px;padding:17px 19px}.ds-mechanism-stage strong{font-family:Barlow Condensed,Impact,sans-serif;font-size:clamp(28px,3vw,39px);font-weight:800;line-height:1}.ds-mechanism-stage span{max-width:29ch;font-size:13px;font-weight:700;line-height:1.35}.ds-episode-stage{background:var(--lime,#e5f468)}"
-    },
-    {
-      "name": "Private RSS Stage",
-      "kind": "custom",
-      "description": "The private feed of saved episodes.",
-      "html": "<div class=\"ds-flow-stage ds-rss-stage\"><h3>El teu RSS privat</h3><div class=\"ds-flow-icon ds-rss-icon\" aria-hidden=\"true\"><span></span><span></span><span></span></div><p>La teva selecció, sempre al dia</p></div>",
-      "css": ".ds-flow-stage{min-width:0;min-height:205px;padding:18px 20px}.ds-flow-stage h3{margin:0 0 17px;font-size:15px;font-weight:800;line-height:1.3}.ds-flow-stage p{margin:11px 0 0;font-size:13px;font-weight:650;line-height:1.4}.ds-flow-icon{height:51px}.ds-rss-stage{background:var(--lime,#e5f468)}.ds-rss-icon{position:relative;width:51px}.ds-rss-icon span{position:absolute;left:0;bottom:0;border:3px solid var(--blue-deep,#2336a9);border-left:0;border-bottom:0;border-radius:0 100% 0 0}.ds-rss-icon span:nth-child(1){width:46px;height:46px}.ds-rss-icon span:nth-child(2){width:29px;height:29px}.ds-rss-icon span:nth-child(3){width:8px;height:8px;border:0;background:var(--blue-deep,#2336a9);border-radius:50%}"
-    },
-    {
-      "name": "Podcast Player Stage",
-      "kind": "custom",
-      "description": "The listener’s usual podcast player, not an embedded player.",
-      "html": "<div class=\"ds-flow-stage ds-player-stage\"><h3>El teu reproductor</h3><div class=\"ds-flow-icon ds-play-icon\" aria-hidden=\"true\"><span></span></div><p>Escolta&#x27;ls on ja escoltes podcasts</p></div>",
-      "css": ".ds-flow-stage{min-width:0;min-height:205px;padding:18px 20px}.ds-flow-stage h3{margin:0 0 17px;font-size:15px;font-weight:800;line-height:1.3}.ds-flow-stage p{margin:11px 0 0;font-size:13px;font-weight:650;line-height:1.4}.ds-flow-icon{height:51px}.ds-player-stage{background:var(--player-field,#e6eaff)}.ds-play-icon{display:grid;place-items:center;width:51px;border:2px solid var(--blue-deep,#2336a9);border-radius:50%}.ds-play-icon span{width:0;height:0;margin-left:4px;border-top:9px solid transparent;border-bottom:9px solid transparent;border-left:15px solid var(--blue-deep,#2336a9)}"
+      "refersTo": "signal-board",
+      "html": "<ol class=\"ds-signal-board\" role=\"list\">\n          <li><span class=\"ds-signal-icon ds-signal-people\" aria-hidden=\"true\"><i></i><i></i><i></i></span><strong>Les persones que segueixes</strong></li>\n          <li><span class=\"ds-signal-icon ds-signal-shows\" aria-hidden=\"true\"><i></i><i></i><i></i></span><strong>Els podcasts que comparteixen</strong></li>\n          <li><span class=\"ds-signal-icon ds-signal-episodes\" aria-hidden=\"true\"><i></i><i></i><i></i><i></i><i></i></span><strong>Els episodis que descobreixes</strong></li>\n        </ol>",
+      "css": ".ds-signal-board {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  background: var(--paper,#f8f9f6);\n  color: var(--ink,#1c2829);\n  border: 1px solid var(--paper,#f8f9f6);\n}\n.ds-signal-board li {\n  display: grid;\n  grid-template-columns: clamp(74px, 10vw, 130px) minmax(0, 1fr);\n  align-items: stretch;\n  min-height: clamp(82px, 11vw, 130px);\n}\n.ds-signal-board li + li { border-top: 1px solid var(--rule,#b5bdb8); }\n.ds-signal-board strong {\n  align-content: center;\n  padding: 12px clamp(13px, 2vw, 25px);\n  font: 800 clamp(24px, 3.1vw, 43px)/.97 var(--display,\"Barlow Condensed\", sans-serif);\n  text-wrap: balance;\n}\n.ds-signal-board li:last-child { background: var(--blue-light,#e8edfb); color: var(--blue,#2544bd); }\n.ds-signal-icon {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 4px;\n  color: var(--blue,#2544bd);\n  border-right: 1px solid var(--rule,#b5bdb8);\n}\n.ds-signal-icon i { display: block; }\n.ds-signal-people i {\n  width: clamp(10px, 1.55vw, 20px);\n  height: clamp(10px, 1.55vw, 20px);\n  border: 2px solid currentColor;\n  border-radius: 50%;\n}\n.ds-signal-people i:nth-child(2) { background: currentColor; translate: 0 -7px; }\n.ds-signal-shows i { width: clamp(9px, 1.35vw, 17px); height: clamp(22px, 3.3vw, 42px); border: 2px solid currentColor; }\n.ds-signal-shows i:nth-child(2) { background: currentColor; }\n.ds-signal-shows i:nth-child(3) { transform: rotate(-12deg); }\n.ds-signal-episodes i { width: 3px; height: 19px; background: currentColor; }\n.ds-signal-episodes i:nth-child(3) { height: 45px; }"
     }
   ],
   "narrative": {
     "northStar": "La graella d'escoltes",
-    "overview": "The public landing extends the app's current radio-programme-guide visual language into a more expressive, editorial introduction. Programme blue carries the header and opening statement; condensed display type gives the proposition its voice. The mechanism board makes the social relationship visible as a sequence of people, podcasts and episodes. This is a flat, ruled composition, not a stack of floating cards.\n\nThe page moves from the programme-blue opening to the cool-paper mechanism board, then a ruled Highlights band for explicit recommendations, a white editorial statement and flat three-stage diagram for the private saved-episode RSS feed, and the programme-blue footer. A compact microphone mark anchors the brand. The diagrams use abstract stages rather than fabricated people, titles or social actions; the feed diagram must not imply that following a podcast means listening to or recommending every episode.",
+    "overview": "A blue opening pairs an editorial headline with a listening guide: three ruled rows show how people, podcasts and episodes connect. The programme imagery is abstract: no invented activity, cover art or account data. Below it a short discovery story and a focused Highlights block distinguish what arrives automatically from what a person recommends.",
     "keyCharacteristics": [
-      "Oversized condensed headings against plain, high-contrast color fields.",
-      "One ruled, three-stage network diagram instead of decorative podcast imagery.",
-      "Signal lime reserved for the in-page call to action, selected language and the episode/RSS stages.",
-      "Square buttons and content blocks; the player symbol is circular."
-    ],
-    "rules": [
-      {
-        "name": "The Signal Color Rule",
-        "body": "Lime indicates a specific action, selection or outcome; it is not a general background accent.",
-        "section": "colors"
-      },
-      {
-        "name": "The Condensed Voice Rule",
-        "body": "Use Barlow Condensed for prominent propositions and stage statements; keep explanatory reading in the system sans.",
-        "section": "typography"
-      },
-      {
-        "name": "The Flat Programme Rule",
-        "body": "Separate ideas with rules, spacing and purposeful field changes; do not add ambient card shadows to this system.",
-        "section": "elevation"
-      }
+      "Condensed type and high-contrast fields.",
+      "A ruled, three-stage listening guide next to the opening statement.",
+      "A compact sequence from saved episodes to the listener's own player."
     ],
     "dos": [
-      "**Do** keep people, followed podcasts and newly discovered episodes legible as separate stages.",
-      "**Do** align new landing work with the approved brand palette and headline typography; keep existing deployed colors documented honestly until the landing itself is revised.",
-      "**Do** use flat rules and color fields to organize information, including on mobile."
+      "**Do** keep discovery, explicit recommendations and the private selection distinct.",
+      "**Do** describe availability plainly without adding a false signup or an app demo."
     ],
     "donts": [
-      "**Don't** make a podcast follow look like a listening event or recommendation.",
-      "**Don't** fabricate account activity or use real public-profile data as a promotional endorsement without a separate decision.",
-      "**Don't** replace the square editorial language with rounded floating cards or ambient shadows."
+      "**Don't** imply that following a podcast means listening or recommending.",
+      "**Don't** use false activity, sample account names or simulated product controls."
     ]
   }
 }

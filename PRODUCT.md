@@ -18,7 +18,7 @@ The landing introduces Podlinker and explains how following people leads to disc
 
 ## Positioning
 
-Podlinker is a social network for discovering podcast episodes through people you follow and the podcasts they follow. The primary feed shows all new episodes of those podcasts, deduplicated when multiple followed people follow the same podcast. Following a podcast never implies listening to or recommending each episode. Explicit recommendations belong to a separate Highlights experience, active in the closed staging pilot. Highlights follow the profile's existing visibility; they are not a separate public feed.
+Podlinker is a social network for discovering podcast episodes through people you follow and the podcasts they follow. The primary feed shows all new episodes of those podcasts, deduplicated when multiple followed people follow the same podcast. Following a podcast never implies listening to or recommending each episode. Explicit recommendations are attributed actions in the main feed and are also shown together in Highlights, which follows the profile's existing visibility. The closed pilot also offers a focused discovery view of podcasts shared by a listener’s network that are not already in their library.
 
 ## Operating Context
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#3047cd">
+  <meta name="theme-color" content="#2544bd">
   <title>Podlinker — Discover podcasts through your people</title>
   <meta name="description" content="Discover episodes through the people you follow. Save the ones you choose and listen to them in a podcast made for you.">
   <meta property="og:type" content="website">
@@ -28,55 +28,66 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="./" aria-label="Podlinker, home"><span class="brand-mark"><img src="../assets/logo.svg" alt="" width="28" height="28"></span><span>podlinker<span class="brand-dot">.</span></span></a>
-      <nav class="header-nav" aria-label="Main navigation"><a href="#com-funciona">How it works</a><a href="#destacats">Highlights</a><a href="#podcast-a-mida">Your own podcast</a></nav>
       <nav class="language-switch" aria-label="Website language"><a href="../ca/" lang="ca" hreflang="ca" data-lang="ca" class="" >CA<span class="sr-only"> — Català</span></a>
 <a href="../es/" lang="es" hreflang="es" data-lang="es" class="" >ES<span class="sr-only"> — Español</span></a>
 <a href="../en/" lang="en" hreflang="en" data-lang="en" class="active" aria-current="page">EN<span class="sr-only"> — English</span></a></nav>
+      <nav class="header-nav" aria-label="Main navigation"><a href="#com-funciona">Discovery</a><a href="#destacats">Highlights</a><a href="#podcast-a-mida">Your own podcast</a></nav>
     </div>
   </header>
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-inner">
         <div class="hero-main">
           <h1 id="hero-title">Your next podcast starts with someone you follow.</h1>
-          <div class="hero-bottom">
-            <p>Follow people. Discover episodes from the podcasts they follow. A feed shaped by your people, not an anonymous chart.</p>
-            <a class="button button-lime" href="#com-funciona">See how it works <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-5-5 5 5-5 5"/></svg></a>
-          </div>
+          <p>Follow people. Discover episodes from the podcasts they follow. A feed shaped by your people, not an anonymous chart.</p>
+          <a class="button" href="#com-funciona">See how it works <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-5-5 5 5-5 5"/></svg></a>
         </div>
+        <ol class="signal-board" role="list">
+          <li><span class="signal-icon signal-people" aria-hidden="true"><i></i><i></i><i></i></span><strong>The people you follow</strong></li>
+          <li><span class="signal-icon signal-shows" aria-hidden="true"><i></i><i></i><i></i></span><strong>The podcasts they share</strong></li>
+          <li><span class="signal-icon signal-episodes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><strong>The episodes you discover</strong></li>
+        </ol>
       </div>
     </section>
-    <section class="mechanism" id="com-funciona" aria-labelledby="diagram-title">
+    <section class="discovery" id="com-funciona" tabindex="-1" aria-labelledby="diagram-title">
+      <div class="wrap discovery-grid">
+        <div class="discovery-main">
+          <h2 id="diagram-title">Find new episodes. And podcasts you haven’t heard of.</h2>
+          <p>Your feed brings you new episodes from podcasts your network shares. “Podcasts new to you” brings together podcasts from your network that aren’t in your library yet.</p>
+        </div>
+        <section class="highlights" id="destacats" tabindex="-1" aria-labelledby="highlights-title">
+          <div class="highlight-mark" aria-hidden="true"></div>
+          <h2 id="highlights-title">Highlights</h2>
+          <p>When someone you follow recommends an episode, it shows up in your feed. In Highlights you can find all those recommendations together.</p>
+        </section>
+      </div>
+    </section>
+    <section class="personal-podcast" id="podcast-a-mida" tabindex="-1" aria-labelledby="personal-podcast-title">
       <div class="wrap">
-        <div class="section-heading"><h2 id="diagram-title">How your feed takes shape</h2><span class="section-rule" aria-hidden="true"></span></div>
-        <div class="network-board" aria-label="How your feed takes shape">
-          <div class="board-column people-column"><div class="board-caption">You follow <strong>people</strong></div><div class="mechanism-stage people-stage"><strong>Your network</strong><span>Profiles you chose to follow</span></div></div>
-          <div class="board-arrow" aria-hidden="true"><span></span></div>
-          <div class="board-column shows-column"><div class="board-caption">They follow <strong>podcasts</strong></div><div class="mechanism-stage shows-stage"><strong>Their collection</strong><span>Podcasts they share with the network</span></div></div>
-          <div class="board-arrow" aria-hidden="true"><span></span></div>
-          <div class="board-column episode-column"><div class="board-caption">You discover <strong>episodes</strong></div><div class="mechanism-stage episode-stage"><strong>New episodes</strong><span>From the podcasts they follow</span></div></div>
+        <div class="personal-podcast-inner">
+          <h2 id="personal-podcast-title">The episodes you choose, together in your player.</h2>
+          <p>Save episodes from different podcasts and turn on a private link (RSS) to listen in a compatible podcast player. Your selection updates as you add or remove episodes.</p>
         </div>
-      </div>
-    </section>
-    <section class="highlights" id="destacats" aria-labelledby="highlights-title">
-      <div class="wrap highlights-inner">
-        <h2 id="highlights-title">Highlights: what your network recommends.</h2>
-        <p>Highlights shows episodes explicitly recommended by people you follow. Your main feed, by contrast, shows new episodes from podcasts they follow.</p>
-      </div>
-    </section>
-    <section class="personal-podcast" id="podcast-a-mida" aria-labelledby="personal-podcast-title">
-      <div class="wrap">
-        <div class="personal-podcast-inner"><h2 id="personal-podcast-title">The episodes you choose, together in your player.</h2><p>Save episodes from different podcasts. Podlinker brings them together in a private RSS feed you can add to your usual podcast player. It updates when you change your selection.</p></div>
-        <div class="saved-flow">
-          <div class="flow-stage saved-stage"><h3>Saved episodes</h3><svg class="saved-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg><p>The episodes you choose</p></div>
-          <div class="flow-arrow" aria-hidden="true"><span></span></div>
-          <div class="flow-stage rss-stage"><h3>Your private RSS</h3><div class="flow-icon rss-icon" aria-hidden="true"><span></span><span></span><span></span></div><p>Your selection, always up to date</p></div>
-          <div class="flow-arrow" aria-hidden="true"><span></span></div>
-          <div class="flow-stage player-stage"><h3>Your podcast player</h3><div class="flow-icon play-icon" aria-hidden="true"><span></span></div><p>Listen where you already listen to podcasts</p></div>
-        </div>
+        <ol class="saved-flow" role="list">
+          <li class="flow-stage">
+            <svg class="saved-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg>
+            <h3>Saved episodes</h3>
+            <p>Pick episodes from different podcasts.</p>
+          </li>
+          <li class="flow-stage">
+            <div class="flow-icon rss-icon" aria-hidden="true"><span></span><span></span><span></span></div>
+            <h3>A private link</h3>
+            <p>Turn on your RSS feed.</p>
+          </li>
+          <li class="flow-stage">
+            <div class="flow-icon play-icon" aria-hidden="true"><span></span></div>
+            <h3>Your podcast player</h3>
+            <p>Add the link to listen to your saved episodes.</p>
+          </li>
+        </ol>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><div><span class="footer-brand">podlinker<span>.</span></span><p>Discover podcasts, person to person.</p></div></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><span class="footer-brand">podlinker.</span><p>Podlinker is in a closed pilot.</p></div></footer>
 </body>
 </html>

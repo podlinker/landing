@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#3047cd">
+  <meta name="theme-color" content="#2544bd">
   <title>Podlinker — Descobreix podcasts a través de la teva gent</title>
   <meta name="description" content="Descobreix episodis a través de les persones que segueixes. Desa els que tries i escolta&#x27;ls en un podcast a la teva mida.">
   <meta property="og:type" content="website">
@@ -28,55 +28,66 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="./" aria-label="Podlinker, inici"><span class="brand-mark"><img src="../assets/logo.svg" alt="" width="28" height="28"></span><span>podlinker<span class="brand-dot">.</span></span></a>
-      <nav class="header-nav" aria-label="Navegació principal"><a href="#com-funciona">Com funciona</a><a href="#destacats">Destacats</a><a href="#podcast-a-mida">Podcast a mida</a></nav>
       <nav class="language-switch" aria-label="Idioma del web"><a href="../ca/" lang="ca" hreflang="ca" data-lang="ca" class="active" aria-current="page">CA<span class="sr-only"> — Català</span></a>
 <a href="../es/" lang="es" hreflang="es" data-lang="es" class="" >ES<span class="sr-only"> — Español</span></a>
 <a href="../en/" lang="en" hreflang="en" data-lang="en" class="" >EN<span class="sr-only"> — English</span></a></nav>
+      <nav class="header-nav" aria-label="Navegació principal"><a href="#com-funciona">Descoberta</a><a href="#destacats">Destacats</a><a href="#podcast-a-mida">Podcast a mida</a></nav>
     </div>
   </header>
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-inner">
         <div class="hero-main">
           <h1 id="hero-title">El teu pròxim podcast comença amb algú que segueixes.</h1>
-          <div class="hero-bottom">
-            <p>Segueix persones. Descobreix els episodis dels podcasts que segueixen. Un feed fet de la teva gent, no d&#x27;una llista anònima.</p>
-            <a class="button button-lime" href="#com-funciona">Descobreix com funciona <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-5-5 5 5-5 5"/></svg></a>
-          </div>
+          <p>Segueix persones. Descobreix els episodis dels podcasts que segueixen. Un feed fet de la teva gent, no d&#x27;una llista anònima.</p>
+          <a class="button" href="#com-funciona">Mira com funciona <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-5-5 5 5-5 5"/></svg></a>
         </div>
+        <ol class="signal-board" role="list">
+          <li><span class="signal-icon signal-people" aria-hidden="true"><i></i><i></i><i></i></span><strong>Les persones que segueixes</strong></li>
+          <li><span class="signal-icon signal-shows" aria-hidden="true"><i></i><i></i><i></i></span><strong>Els podcasts que comparteixen</strong></li>
+          <li><span class="signal-icon signal-episodes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><strong>Els episodis que descobreixes</strong></li>
+        </ol>
       </div>
     </section>
-    <section class="mechanism" id="com-funciona" aria-labelledby="diagram-title">
+    <section class="discovery" id="com-funciona" tabindex="-1" aria-labelledby="diagram-title">
+      <div class="wrap discovery-grid">
+        <div class="discovery-main">
+          <h2 id="diagram-title">Troba capítols nous. I podcasts que no coneixies.</h2>
+          <p>Al feed hi entren capítols nous dels podcasts que comparteix la teva xarxa. A «Podcasts nous per a tu» hi trobes podcasts de la xarxa que encara no tens a la biblioteca.</p>
+        </div>
+        <section class="highlights" id="destacats" tabindex="-1" aria-labelledby="highlights-title">
+          <div class="highlight-mark" aria-hidden="true"></div>
+          <h2 id="highlights-title">Destacats</h2>
+          <p>Quan algú que segueixes recomana un episodi, ho veus al feed. A Destacats pots trobar totes aquestes recomanacions juntes.</p>
+        </section>
+      </div>
+    </section>
+    <section class="personal-podcast" id="podcast-a-mida" tabindex="-1" aria-labelledby="personal-podcast-title">
       <div class="wrap">
-        <div class="section-heading"><h2 id="diagram-title">Així es construeix el teu feed</h2><span class="section-rule" aria-hidden="true"></span></div>
-        <div class="network-board" aria-label="Així es construeix el teu feed">
-          <div class="board-column people-column"><div class="board-caption">Tu segueixes <strong>persones</strong></div><div class="mechanism-stage people-stage"><strong>La teva xarxa</strong><span>Perfils que has triat seguir</span></div></div>
-          <div class="board-arrow" aria-hidden="true"><span></span></div>
-          <div class="board-column shows-column"><div class="board-caption">Elles segueixen <strong>podcasts</strong></div><div class="mechanism-stage shows-stage"><strong>La seva col·lecció</strong><span>Podcasts que comparteixen amb la xarxa</span></div></div>
-          <div class="board-arrow" aria-hidden="true"><span></span></div>
-          <div class="board-column episode-column"><div class="board-caption">Tu descobreixes <strong>episodis</strong></div><div class="mechanism-stage episode-stage"><strong>Capítols nous</strong><span>Dels podcasts que segueixen</span></div></div>
+        <div class="personal-podcast-inner">
+          <h2 id="personal-podcast-title">Els episodis que tries, junts al teu reproductor.</h2>
+          <p>Desa episodis de podcasts diferents i activa un enllaç privat (RSS) per escoltar-los al teu reproductor de podcasts compatible. La selecció s’actualitza quan hi afegeixes o en treus un capítol.</p>
         </div>
-      </div>
-    </section>
-    <section class="highlights" id="destacats" aria-labelledby="highlights-title">
-      <div class="wrap highlights-inner">
-        <h2 id="highlights-title">Destacats: les recomanacions de la teva xarxa.</h2>
-        <p>A Destacats hi trobes episodis que les persones que segueixes han recomanat expressament. El feed principal, en canvi, mostra els capítols nous dels podcasts que segueixen.</p>
-      </div>
-    </section>
-    <section class="personal-podcast" id="podcast-a-mida" aria-labelledby="personal-podcast-title">
-      <div class="wrap">
-        <div class="personal-podcast-inner"><h2 id="personal-podcast-title">Els episodis que tries, junts al teu reproductor.</h2><p>Desa capítols de podcasts diferents. Podlinker els reuneix en un RSS privat que pots afegir al teu reproductor habitual i que s&#x27;actualitza quan canvies la selecció.</p></div>
-        <div class="saved-flow">
-          <div class="flow-stage saved-stage"><h3>Episodis desats</h3><svg class="saved-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg><p>Els capítols que tries</p></div>
-          <div class="flow-arrow" aria-hidden="true"><span></span></div>
-          <div class="flow-stage rss-stage"><h3>El teu RSS privat</h3><div class="flow-icon rss-icon" aria-hidden="true"><span></span><span></span><span></span></div><p>La teva selecció, sempre al dia</p></div>
-          <div class="flow-arrow" aria-hidden="true"><span></span></div>
-          <div class="flow-stage player-stage"><h3>El teu reproductor</h3><div class="flow-icon play-icon" aria-hidden="true"><span></span></div><p>Escolta&#x27;ls on ja escoltes podcasts</p></div>
-        </div>
+        <ol class="saved-flow" role="list">
+          <li class="flow-stage">
+            <svg class="saved-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg>
+            <h3>Episodis desats</h3>
+            <p>Tria capítols de podcasts diferents.</p>
+          </li>
+          <li class="flow-stage">
+            <div class="flow-icon rss-icon" aria-hidden="true"><span></span><span></span><span></span></div>
+            <h3>Un enllaç privat</h3>
+            <p>Activa el teu feed RSS.</p>
+          </li>
+          <li class="flow-stage">
+            <div class="flow-icon play-icon" aria-hidden="true"><span></span></div>
+            <h3>El teu reproductor</h3>
+            <p>Afegeix-hi l’enllaç per escoltar els desats.</p>
+          </li>
+        </ol>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><div><span class="footer-brand">podlinker<span>.</span></span><p>Descobrir podcasts, de persona a persona.</p></div></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><span class="footer-brand">podlinker.</span><p>Podlinker és en fase de pilot tancat.</p></div></footer>
 </body>
 </html>
