@@ -19,6 +19,8 @@ Open `http://localhost:8000/`. The root route chooses a previously selected lang
 
 Social preview images are committed as `assets/og-*.png`; `scripts/og.html?lang=ca|es|en` is their source. Regenerate all three at 1200×630 if the headline changes.
 
+For Codex design checks, install Impeccable in the project (or link a local installation at `.agents/skills/impeccable`), then review and approve the project hook in Codex with `/hooks`. The hook skips checkouts without the project launcher.
+
 ## Publication
 
 The canonical public site is `https://podlinker.com/`, served from the Podlinker test host as a separate static Caddy site. The deployment uses an independent release directory and does not replace `staging.podlinker.com`. `.github/workflows/pages.yml` also publishes the same static entry points, assets, robots file and sitemap to GitHub Pages on a push to `main`; its URL is `https://podlinker.github.io/landing/`. The older Next.js template files remain in the repository for now but are not built or shipped by that workflow.
