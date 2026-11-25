@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#3047cd">
+  <meta name="theme-color" content="#2544bd">
   <title>Podlinker — Descubre podcasts a través de tu gente</title>
   <meta name="description" content="Descubre episodios a través de las personas que sigues. Guarda los que eliges y escúchalos en un podcast a tu medida.">
   <meta property="og:type" content="website">
@@ -28,55 +28,66 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="./" aria-label="Podlinker, inicio"><span class="brand-mark"><img src="../assets/logo.svg" alt="" width="28" height="28"></span><span>podlinker<span class="brand-dot">.</span></span></a>
-      <nav class="header-nav" aria-label="Navegación principal"><a href="#com-funciona">Cómo funciona</a><a href="#destacats">Destacados</a><a href="#podcast-a-mida">Podcast a medida</a></nav>
       <nav class="language-switch" aria-label="Idioma de la web"><a href="../ca/" lang="ca" hreflang="ca" data-lang="ca" class="" >CA<span class="sr-only"> — Català</span></a>
 <a href="../es/" lang="es" hreflang="es" data-lang="es" class="active" aria-current="page">ES<span class="sr-only"> — Español</span></a>
 <a href="../en/" lang="en" hreflang="en" data-lang="en" class="" >EN<span class="sr-only"> — English</span></a></nav>
+      <nav class="header-nav" aria-label="Navegación principal"><a href="#com-funciona">Descubrir</a><a href="#destacats">Destacados</a><a href="#podcast-a-mida">Podcast a medida</a></nav>
     </div>
   </header>
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-inner">
         <div class="hero-main">
           <h1 id="hero-title">Tu próximo podcast empieza con alguien a quien sigues.</h1>
-          <div class="hero-bottom">
-            <p>Sigue a personas. Descubre los episodios de los podcasts que siguen. Un feed hecho con tu gente, no con una lista anónima.</p>
-            <a class="button button-lime" href="#com-funciona">Descubre cómo funciona <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-5-5 5 5-5 5"/></svg></a>
-          </div>
+          <p>Sigue a personas. Descubre los episodios de los podcasts que siguen. Un feed hecho con tu gente, no con una lista anónima.</p>
+          <a class="button" href="#com-funciona">Mira cómo funciona <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-5-5 5 5-5 5"/></svg></a>
         </div>
+        <ol class="signal-board" role="list">
+          <li><span class="signal-icon signal-people" aria-hidden="true"><i></i><i></i><i></i></span><strong>Las personas a las que sigues</strong></li>
+          <li><span class="signal-icon signal-shows" aria-hidden="true"><i></i><i></i><i></i></span><strong>Los podcasts que comparten</strong></li>
+          <li><span class="signal-icon signal-episodes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><strong>Los episodios que descubres</strong></li>
+        </ol>
       </div>
     </section>
-    <section class="mechanism" id="com-funciona" aria-labelledby="diagram-title">
+    <section class="discovery" id="com-funciona" tabindex="-1" aria-labelledby="diagram-title">
+      <div class="wrap discovery-grid">
+        <div class="discovery-main">
+          <h2 id="diagram-title">Encuentra episodios nuevos. Y podcasts que no conocías.</h2>
+          <p>En el feed aparecen episodios nuevos de los podcasts que comparte tu red. En «Podcasts nuevos para ti» encuentras podcasts de tu red que aún no tienes en tu biblioteca.</p>
+        </div>
+        <section class="highlights" id="destacats" tabindex="-1" aria-labelledby="highlights-title">
+          <div class="highlight-mark" aria-hidden="true"></div>
+          <h2 id="highlights-title">Destacados</h2>
+          <p>Cuando alguien a quien sigues recomienda un episodio, lo ves en el feed. En Destacados puedes encontrar todas esas recomendaciones juntas.</p>
+        </section>
+      </div>
+    </section>
+    <section class="personal-podcast" id="podcast-a-mida" tabindex="-1" aria-labelledby="personal-podcast-title">
       <div class="wrap">
-        <div class="section-heading"><h2 id="diagram-title">Así se construye tu feed</h2><span class="section-rule" aria-hidden="true"></span></div>
-        <div class="network-board" aria-label="Así se construye tu feed">
-          <div class="board-column people-column"><div class="board-caption">Tú sigues a <strong>personas</strong></div><div class="mechanism-stage people-stage"><strong>Tu red</strong><span>Perfiles que has elegido seguir</span></div></div>
-          <div class="board-arrow" aria-hidden="true"><span></span></div>
-          <div class="board-column shows-column"><div class="board-caption">Ellas siguen <strong>podcasts</strong></div><div class="mechanism-stage shows-stage"><strong>Su colección</strong><span>Podcasts que comparten con la red</span></div></div>
-          <div class="board-arrow" aria-hidden="true"><span></span></div>
-          <div class="board-column episode-column"><div class="board-caption">Tú descubres <strong>episodios</strong></div><div class="mechanism-stage episode-stage"><strong>Capítulos nuevos</strong><span>De los podcasts que siguen</span></div></div>
+        <div class="personal-podcast-inner">
+          <h2 id="personal-podcast-title">Los episodios que eliges, juntos en tu reproductor.</h2>
+          <p>Guarda episodios de distintos podcasts y activa un enlace privado (RSS) para escucharlos en un reproductor de podcasts compatible. La selección se actualiza cuando añades o quitas un episodio.</p>
         </div>
-      </div>
-    </section>
-    <section class="highlights" id="destacats" aria-labelledby="highlights-title">
-      <div class="wrap highlights-inner">
-        <h2 id="highlights-title">Destacados: las recomendaciones de tu red.</h2>
-        <p>En Destacados encuentras episodios que las personas a las que sigues han recomendado expresamente. El feed principal, en cambio, muestra los capítulos nuevos de los podcasts que siguen.</p>
-      </div>
-    </section>
-    <section class="personal-podcast" id="podcast-a-mida" aria-labelledby="personal-podcast-title">
-      <div class="wrap">
-        <div class="personal-podcast-inner"><h2 id="personal-podcast-title">Los episodios que eliges, juntos en tu reproductor.</h2><p>Guarda capítulos de distintos podcasts. Podlinker los reúne en un RSS privado que puedes añadir a tu reproductor habitual y que se actualiza cuando cambias la selección.</p></div>
-        <div class="saved-flow">
-          <div class="flow-stage saved-stage"><h3>Episodios guardados</h3><svg class="saved-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg><p>Los capítulos que eliges</p></div>
-          <div class="flow-arrow" aria-hidden="true"><span></span></div>
-          <div class="flow-stage rss-stage"><h3>Tu RSS privado</h3><div class="flow-icon rss-icon" aria-hidden="true"><span></span><span></span><span></span></div><p>Tu selección, siempre al día</p></div>
-          <div class="flow-arrow" aria-hidden="true"><span></span></div>
-          <div class="flow-stage player-stage"><h3>Tu reproductor</h3><div class="flow-icon play-icon" aria-hidden="true"><span></span></div><p>Escúchalos donde ya escuchas podcasts</p></div>
-        </div>
+        <ol class="saved-flow" role="list">
+          <li class="flow-stage">
+            <svg class="saved-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg>
+            <h3>Episodios guardados</h3>
+            <p>Elige episodios de distintos podcasts.</p>
+          </li>
+          <li class="flow-stage">
+            <div class="flow-icon rss-icon" aria-hidden="true"><span></span><span></span><span></span></div>
+            <h3>Un enlace privado</h3>
+            <p>Activa tu feed RSS.</p>
+          </li>
+          <li class="flow-stage">
+            <div class="flow-icon play-icon" aria-hidden="true"><span></span></div>
+            <h3>Tu reproductor</h3>
+            <p>Añade el enlace para escuchar lo que guardaste.</p>
+          </li>
+        </ol>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><div><span class="footer-brand">podlinker<span>.</span></span><p>Descubrir podcasts, de persona a persona.</p></div></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><span class="footer-brand">podlinker.</span><p>Podlinker está en fase de piloto cerrado.</p></div></footer>
 </body>
 </html>
