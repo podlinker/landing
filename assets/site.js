@@ -9,7 +9,7 @@
 
   const current = document.documentElement.lang;
   const languages = [...document.querySelectorAll('[data-lang]')];
-  const sections = [...document.querySelectorAll('main section[id]')].reverse();
+  const sections = [...document.querySelectorAll('main section[id]')];
   const destinations = languages.map(link => new URL(link.href));
   let frame = 0;
 
@@ -27,9 +27,18 @@
     const scroller = document.scrollingElement;
     const atEnd = scroller.scrollTop > 0 &&
       scroller.scrollHeight - scroller.scrollTop <= scroller.clientHeight + 2;
-    const section = atEnd
-      ? sections[0]
-      : sections.find(item => item.getBoundingClientRect().top <= readingLine);
+    const top = header?.getBoundingClientRect().bottom ?? 0;
+    const anchored = sections.find(item => '#' + item.id === location.hash);
+    const anchorTop = anchored?.getBoundingClientRect().top;
+    const section = anchorTop >= top && (anchorTop <= readingLine || atEnd)
+      ? anchored
+      : atEnd
+        ? sections.at(-1)
+        : sections.reduce((visible, item) => {
+          const position = item.getBoundingClientRect().top;
+          if (position > readingLine) return visible;
+          return !visible || position > visible.getBoundingClientRect().top ? item : visible;
+        }, undefined);
     setSection(section?.id ?? '');
   }
 
@@ -40,6 +49,7 @@
   setSection(sections.find(section => '#' + section.id === location.hash)?.id ?? '');
   window.addEventListener('scroll', scheduleUpdate, { passive: true });
   window.addEventListener('resize', scheduleUpdate);
+  window.addEventListener('hashchange', scheduleUpdate);
   window.addEventListener('pageshow', scheduleUpdate);
 
   languages.forEach(link => {
