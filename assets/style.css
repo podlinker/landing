@@ -305,13 +305,58 @@ a { color: inherit; }
   .header-nav { gap: 0 10px; font-size: 12px; }
 }
 
-.landing-not-found { padding-block: clamp(56px, 10vw, 112px); }
-.landing-not-found section:not([hidden]) + section:not([hidden]) { margin-block-start: 32px; }
-.landing-not-found h1 {
-  margin: 0 0 24px;
-  font: 800 clamp(42px, 6vw, 72px)/.95 var(--display);
+/* The recovery page borrows the landing's blue broadcast field and lime action. */
+.landing-not-found {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 88px);
+  padding-block: clamp(36px, 8vw, 100px);
+}
+.error-frequency {
+  display: grid;
+  place-items: center;
+  min-height: clamp(180px, 30vw, 350px);
+  background: var(--blue);
+  color: var(--white);
+  padding: 24px;
+}
+.error-frequency span {
+  font: 800 clamp(112px, 16vw, 240px)/.76 var(--display);
+  letter-spacing: -.035em;
+  padding-bottom: .13em;
+  border-bottom: 4px solid var(--signal-lime);
+}
+.error-recovery section:not([hidden]) + section:not([hidden]) {
+  border-top: 1px solid var(--rule);
+  margin-top: 24px;
+  padding-top: 24px;
+}
+.error-recovery h1 {
+  margin: 0;
+  max-width: 17ch;
+  font: 800 clamp(42px, 5.5vw, 72px)/.94 var(--display);
+  letter-spacing: -.02em;
   text-wrap: balance;
 }
-.landing-not-found nav { display: flex; flex-wrap: wrap; gap: 0 16px; margin-top: 24px; }
-.landing-not-found nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--blue); text-underline-offset: 3px; }
-.landing-not-found .button { border: 1px solid var(--ink); }
+.error-recovery p { margin: 14px 0 22px; max-width: 38ch; line-height: 1.55; }
+.error-recovery .button { border: 1px solid var(--ink); }
+.error-recovery nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  margin-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+.error-recovery nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--blue);
+  text-underline-offset: 3px;
+}
+@media (max-width: 760px) {
+  .landing-not-found { grid-template-columns: minmax(0, 1fr); }
+  .error-frequency { min-height: 0; }
+  .error-frequency span { font-size: clamp(88px, 22vw, 150px); }
+}
