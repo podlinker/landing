@@ -6,6 +6,8 @@ colors:
   ink: "#1c2829"
   paper: "#f8f9f6"
   white: "#ffffff"
+  signal-lime: "#e5f468"
+  signal-lime-hover: "#f1faad"
   rule: "#b5bdb8"
   blue-light: "#e8edfb"
 typography:
@@ -32,8 +34,8 @@ rounded:
   square: "0px"
 components:
   button-primary:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.programme-blue}"
+    backgroundColor: "{colors.signal-lime}"
+    textColor: "{colors.ink}"
     rounded: "{rounded.square}"
     height: "50px"
   language-current:
@@ -66,7 +68,7 @@ A blue opening pairs an editorial headline with a listening guide: three ruled r
 
 ## Colors
 
-Blue is the opening, navigation and footer. Ink on paper or white carries longer reading. The pale blue tonal extension marks the discovery outcome and the Highlights view. Rules are neutral; categories and content do not get branded color assignments.
+Blue is the opening, navigation and footer. Ink on paper or white carries longer reading. The pale blue tonal extension marks the discovery outcome and the Highlights view. Signal lime accents the wordmark period and the primary action; it does not tint sections. Rules are neutral; categories and content do not get branded color assignments.
 
 ## Typography
 

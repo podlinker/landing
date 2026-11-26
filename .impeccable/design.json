@@ -20,7 +20,7 @@
       "kind": "button",
       "refersTo": "button-primary",
       "html": "<a class=\"ds-button\" href=\"#com-funciona\">Mira com funciona <svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11m-5-5 5 5-5 5\"/></svg></a>",
-      "css": ".ds-button {\n  width: fit-content;\n  display: inline-flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 20px;\n  min-height: 50px;\n  padding: 8px 16px;\n  background: var(--white,#fff);\n  color: var(--blue,#2544bd);\n  font-size: 15px;\n  font-weight: 800;\n  text-decoration: none;\n}\n.ds-button:hover { background: var(--blue-light,#e8edfb); }\n.ds-button svg { flex: 0 0 20px; width: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }"
+      "css": ".ds-button {\n  width: fit-content;\n  display: inline-flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 20px;\n  min-height: 50px;\n  padding: 8px 16px;\n  background: var(--signal-lime,#e5f468);\n  color: var(--ink,#1c2829);\n  font-size: 15px;\n  font-weight: 800;\n  text-decoration: none;\n}\n.ds-button:hover { background: var(--signal-lime-hover,#f1faad); }\n.ds-button svg { flex: 0 0 20px; width: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }"
     },
     {
       "name": "Listening guide",
