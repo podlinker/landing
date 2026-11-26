@@ -199,14 +199,17 @@ error_prefix = environ.get("LANDING_404_PREFIX", "")
     </div>
   </header>
   <main class="wrap landing-not-found">
-    <section lang="ca" data-error-language><h1>No hem trobat aquesta pàgina</h1><a class="button" href="{error_prefix}/ca/">Torna a la portada</a></section>
-    <section lang="es" data-error-language><h1>No encontramos esta página</h1><a class="button" href="{error_prefix}/es/">Volver al inicio</a></section>
-    <section lang="en" data-error-language><h1>This page couldn’t be found</h1><a class="button" href="{error_prefix}/en/">Back to the homepage</a></section>
-    <nav aria-label="Català / Español / English">
-      <a href="{error_prefix}/ca/" lang="ca">Català</a>
-      <a href="{error_prefix}/es/" lang="es">Español</a>
-      <a href="{error_prefix}/en/" lang="en">English</a>
-    </nav>
+    <div class="error-frequency" aria-hidden="true"><span>404</span></div>
+    <div class="error-recovery">
+      <section lang="ca" data-error-language><h1>No hem trobat aquesta pàgina</h1><p>L’enllaç pot haver canviat. Pots tornar a la portada de Podlinker.</p><a class="button" href="{error_prefix}/ca/">Torna a la portada</a></section>
+      <section lang="es" data-error-language><h1>No encontramos esta página</h1><p>Puede que el enlace haya cambiado. Puedes volver a la portada de Podlinker.</p><a class="button" href="{error_prefix}/es/">Volver al inicio</a></section>
+      <section lang="en" data-error-language><h1>This page couldn’t be found</h1><p>The link may have changed. You can return to the Podlinker homepage.</p><a class="button" href="{error_prefix}/en/">Back to the homepage</a></section>
+      <nav aria-label="Català / Español / English">
+        <a href="{error_prefix}/ca/" lang="ca">Català</a>
+        <a href="{error_prefix}/es/" lang="es">Español</a>
+        <a href="{error_prefix}/en/" lang="en">English</a>
+      </nav>
+    </div>
   </main>
 </body>
 </html>
