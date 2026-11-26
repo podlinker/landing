@@ -162,7 +162,7 @@ for locale, raw in COPY.items():
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><span class="footer-brand">podlinker.</span><p>{c["footer"]}</p></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><span class="footer-brand">podlinker<span class="brand-dot">.</span></span><p>{c["footer"]}</p></div></footer>
 </body>
 </html>
 '''
