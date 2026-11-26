@@ -3,6 +3,7 @@
 from hashlib import sha256
 from html import escape
 from pathlib import Path
+from os import environ
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://podlinker.com"
@@ -10,7 +11,7 @@ BASE = "https://podlinker.com"
 # A returning browser must not pair new markup with older cached styles or scripts.
 ASSET_URLS = {
     name: f"assets/{name}?v={sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:16]}"
-    for name in ("style.css", "site.js", "redirect.js")
+    for name in ("style.css", "site.js", "redirect.js", "not-found.js")
 }
 
 COPY = {
@@ -177,3 +178,36 @@ for locale, raw in COPY.items():
     + "".join(f"  <url><loc>{BASE}/{locale}/</loc></url>\n" for locale in COPY)
     + '</urlset>\n'
 )
+
+# The error document can be served from any nested URL.
+error_prefix = environ.get("LANDING_404_PREFIX", "")
+(ROOT / "404.html").write_text(f'''<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Podlinker</title>
+  <link rel="icon" href="{error_prefix}/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{error_prefix}/{ASSET_URLS["style.css"]}">
+  <script defer src="{error_prefix}/{ASSET_URLS["not-found.js"]}"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{error_prefix}/"><span class="brand-mark"><img src="{error_prefix}/assets/logo.svg" alt="" width="28" height="28"></span><span>podlinker<span class="brand-dot">.</span></span></a>
+    </div>
+  </header>
+  <main class="wrap landing-not-found">
+    <section lang="ca" data-error-language><h1>No hem trobat aquesta pàgina</h1><a class="button" href="{error_prefix}/ca/">Torna a la portada</a></section>
+    <section lang="es" data-error-language><h1>No encontramos esta página</h1><a class="button" href="{error_prefix}/es/">Volver al inicio</a></section>
+    <section lang="en" data-error-language><h1>This page couldn’t be found</h1><a class="button" href="{error_prefix}/en/">Back to the homepage</a></section>
+    <nav aria-label="Català / Español / English">
+      <a href="{error_prefix}/ca/" lang="ca">Català</a>
+      <a href="{error_prefix}/es/" lang="es">Español</a>
+      <a href="{error_prefix}/en/" lang="en">English</a>
+    </nav>
+  </main>
+</body>
+</html>
+''')

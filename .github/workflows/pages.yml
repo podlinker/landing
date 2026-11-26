@@ -23,11 +23,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build language pages
-        run: python3 scripts/build.py
+        run: LANDING_404_PREFIX=/landing python3 scripts/build.py
       - name: Package static site
         run: |
           mkdir _site
-          cp -R index.html ca es en assets robots.txt sitemap.xml .nojekyll _site/
+          cp -R 404.html index.html ca es en assets robots.txt sitemap.xml .nojekyll _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

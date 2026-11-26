@@ -304,3 +304,14 @@ a { color: inherit; }
   .brand-mark { width: 30px; height: 30px; }
   .header-nav { gap: 0 10px; font-size: 12px; }
 }
+
+.landing-not-found { padding-block: clamp(56px, 10vw, 112px); }
+.landing-not-found section:not([hidden]) + section:not([hidden]) { margin-block-start: 32px; }
+.landing-not-found h1 {
+  margin: 0 0 24px;
+  font: 800 clamp(42px, 6vw, 72px)/.95 var(--display);
+  text-wrap: balance;
+}
+.landing-not-found nav { display: flex; flex-wrap: wrap; gap: 0 16px; margin-top: 24px; }
+.landing-not-found nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--blue); text-underline-offset: 3px; }
+.landing-not-found .button { border: 1px solid var(--ink); }
