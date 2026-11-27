@@ -126,6 +126,7 @@ a { color: inherit; }
   color: var(--blue-light);
   font-size: 18px;
   line-height: 1.56;
+  text-wrap: pretty;
 }
 .button {
   width: fit-content;
@@ -212,7 +213,7 @@ a { color: inherit; }
 }
 .highlights { background: var(--blue-light); padding: clamp(23px, 3.4vw, 46px); }
 .highlights h2 { font-size: clamp(35px, 4.5vw, 57px); }
-.highlights p { margin-top: 11px; }
+.highlights p { margin-top: 11px; text-wrap: pretty; }
 .highlight-mark {
   width: 25px;
   height: 15px;
@@ -303,17 +304,46 @@ a { color: inherit; }
   .brand { gap: 7px; font-size: 19px; }
   .brand-mark { width: 30px; height: 30px; }
   .header-nav { gap: 0 10px; font-size: 12px; }
+  .hero-inner { padding-block: 28px; row-gap: 24px; }
+  .hero h1 { font-size: clamp(45px, 12.9vw, 49px); }
+  .hero-main p { margin-block: 16px 20px; font-size: 16px; line-height: 1.5; }
 }
+
+.locale-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+}
+.locale-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--blue);
+  text-underline-offset: 3px;
+}
+.landing-language .brand { margin: 0; }
+.landing-language .wrap { width: min(390px, calc(100% - 36px)); }
+.landing-language main { padding-block: 28px; }
+.landing-language .locale-links { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.landing-language .locale-links a {
+  min-height: 50px;
+  padding-inline: 12px;
+  border-bottom: 1px solid var(--rule);
+  font-weight: 700;
+}
+.landing-language .locale-links a:hover { background: var(--blue-light); }
 
 /* The recovery page borrows the landing's blue broadcast field and lime action. */
 .landing-not-found {
   display: grid;
+  grid-template-areas: "mark recovery";
   grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(28px, 6vw, 88px);
   padding-block: clamp(36px, 8vw, 100px);
 }
 .error-frequency {
+  grid-area: mark;
   display: grid;
   place-items: center;
   min-height: clamp(180px, 30vw, 350px);
@@ -327,11 +357,7 @@ a { color: inherit; }
   padding-bottom: .13em;
   border-bottom: 4px solid var(--signal-lime);
 }
-.error-recovery section:not([hidden]) + section:not([hidden]) {
-  border-top: 1px solid var(--rule);
-  margin-top: 24px;
-  padding-top: 24px;
-}
+.error-recovery { grid-area: recovery; }
 .error-recovery h1 {
   margin: 0;
   max-width: 17ch;
@@ -341,22 +367,25 @@ a { color: inherit; }
 }
 .error-recovery p { margin: 14px 0 22px; max-width: 38ch; line-height: 1.55; }
 .error-recovery .button { border: 1px solid var(--ink); }
-.error-recovery nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 24px;
+.error-recovery .locale-links {
   margin-top: 24px;
   border-top: 1px solid var(--rule);
 }
-.error-recovery nav a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  color: var(--blue);
-  text-underline-offset: 3px;
+.error-recovery .error-fallback {
+  max-width: none;
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1.05;
+}
+.error-fallback span {
+  display: block;
 }
 @media (max-width: 760px) {
-  .landing-not-found { grid-template-columns: minmax(0, 1fr); }
-  .error-frequency { min-height: 0; }
-  .error-frequency span { font-size: clamp(88px, 22vw, 150px); }
+  .landing-not-found {
+    grid-template-areas: "recovery" "mark";
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding-block: 24px;
+  }
+  .error-frequency { min-height: 0; padding: 16px; }
+  .error-frequency span { font-size: clamp(64px, 15vw, 112px); }
 }
