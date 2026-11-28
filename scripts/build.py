@@ -70,6 +70,14 @@ COPY = {
 
 LANG_NAMES = {"ca": "Català", "es": "Español", "en": "English"}
 
+
+def language_links(prefix):
+    return "\n        ".join(
+        f'<a href="{prefix}{code}/" lang="{code}" hreflang="{code}">{name}</a>'
+        for code, name in LANG_NAMES.items()
+    )
+
+
 for locale, raw in COPY.items():
     c = {key: escape(value, quote=True) for key, value in raw.items()}
     langs = "\n".join(
@@ -169,7 +177,30 @@ for locale, raw in COPY.items():
 '''
     (ROOT / locale / "index.html").write_text(html)
 
-(ROOT / "index.html").write_text(f'''<!doctype html><html lang="ca"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Podlinker</title><script src="{ASSET_URLS["redirect.js"]}"></script></head><body><p><a href="ca/">Podlinker · Català</a></p><p><a href="es/">Español</a> · <a href="en/">English</a></p></body></html>''')
+(ROOT / "index.html").write_text(f'''<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Podlinker</title>
+  <script src="{ASSET_URLS["redirect.js"]}"></script>
+  <link rel="stylesheet" href="{ASSET_URLS["style.css"]}">
+</head>
+<body class="landing-language">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <h1 class="brand"><span class="brand-mark"><img src="assets/logo.svg" alt="" width="28" height="28"></span><span>podlinker<span class="brand-dot">.</span></span></h1>
+    </div>
+  </header>
+  <main class="wrap">
+    <nav class="locale-links" aria-label="Català / Español / English">
+        {language_links("")}
+    </nav>
+  </main>
+</body>
+</html>
+''')
 
 (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
 (ROOT / "sitemap.xml").write_text(
@@ -187,7 +218,7 @@ error_prefix = environ.get("LANDING_404_PREFIX", "")
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Podlinker</title>
+  <title>404 · Pàgina no trobada · Podlinker</title>
   <link rel="icon" href="{error_prefix}/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{error_prefix}/{ASSET_URLS["style.css"]}">
   <script defer src="{error_prefix}/{ASSET_URLS["not-found.js"]}"></script>
@@ -199,17 +230,20 @@ error_prefix = environ.get("LANDING_404_PREFIX", "")
     </div>
   </header>
   <main class="wrap landing-not-found">
-    <div class="error-frequency" aria-hidden="true"><span>404</span></div>
     <div class="error-recovery">
-      <section lang="ca" data-error-language><h1>No hem trobat aquesta pàgina</h1><p>L’enllaç pot haver canviat. Pots tornar a la portada de Podlinker.</p><a class="button" href="{error_prefix}/ca/">Torna a la portada</a></section>
-      <section lang="es" data-error-language><h1>No encontramos esta página</h1><p>Puede que el enlace haya cambiado. Puedes volver a la portada de Podlinker.</p><a class="button" href="{error_prefix}/es/">Volver al inicio</a></section>
-      <section lang="en" data-error-language><h1>This page couldn’t be found</h1><p>The link may have changed. You can return to the Podlinker homepage.</p><a class="button" href="{error_prefix}/en/">Back to the homepage</a></section>
-      <nav aria-label="Català / Español / English">
-        <a href="{error_prefix}/ca/" lang="ca">Català</a>
-        <a href="{error_prefix}/es/" lang="es">Español</a>
-        <a href="{error_prefix}/en/" lang="en">English</a>
+      <h1 class="error-fallback" data-error-fallback>
+        <span lang="ca">Pàgina no trobada</span>
+        <span lang="es">Página no encontrada</span>
+        <span lang="en">Page not found</span>
+      </h1>
+      <section lang="ca" data-error-language hidden><h1>No hem trobat aquesta pàgina</h1><p>L’enllaç pot haver canviat. Pots tornar a la portada de Podlinker.</p><a class="button" href="{error_prefix}/ca/">Torna a la portada</a></section>
+      <section lang="es" data-error-language hidden><h1>No encontramos esta página</h1><p>Puede que el enlace haya cambiado. Puedes volver a la portada de Podlinker.</p><a class="button" href="{error_prefix}/es/">Volver al inicio</a></section>
+      <section lang="en" data-error-language hidden><h1>This page couldn’t be found</h1><p>The link may have changed. You can return to the Podlinker homepage.</p><a class="button" href="{error_prefix}/en/">Back to the homepage</a></section>
+      <nav class="locale-links" aria-label="Català / Español / English">
+        {language_links(f"{error_prefix}/")}
       </nav>
     </div>
+    <div class="error-frequency" aria-hidden="true"><span>404</span></div>
   </main>
 </body>
 </html>
